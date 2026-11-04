@@ -1,0 +1,270 @@
+<!doctype html>
+<!-- Plik wygenerowany z przyklady/_zrodla/restauracja/strony/menu.html. Zmieniaj szablon i uruchom: py -m src.przyklady -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Menu – Gospoda Trzy Doliny</title>
+<meta name="description" content="Karta dań: zupy, dziczyzna, pstrąg, pierogi, desery i piwa z regionu. Ceny w złotych.">
+<link rel="alternate" hreflang="pl" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/menu.html">
+<link rel="alternate" hreflang="de" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/de/menu.html">
+<link rel="alternate" hreflang="en" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/en/menu.html">
+<link rel="alternate" hreflang="x-default" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/menu.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237C1D24'/%3E%3Cpath d='M10 46 L24 24 L32 36 L40 22 L54 46 Z' fill='%23FAF7F2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { bg: "#FAF7F2", surface: "#FFFFFF", ink: "#241A15", muted: "#6B5E55", line: "#E7DFD5",
+              wine: "#7C1D24", winedark: "#5F151B", amber: "#C05621", oak: "#2D1F18", moss: "#384B34", sand: "#F1E9DD" },
+    fontFamily: { display: ["Fraunces", "Georgia", "serif"], sans: ["Work Sans", "system-ui", "sans-serif"] }
+  } } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { padding-top: 28px; overflow-x: hidden; }
+  section[id], div[id].kotwica { scroll-margin-top: 7.5rem; }
+  [data-menu] section[id] { scroll-margin-top: 10.5rem; }
+  h1, h2, h3 { overflow-wrap: break-word; }
+  html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: auto; hyphens: auto; }
+  .modal[hidden], [data-panel][hidden] { display: none; }
+  .dd-panel { display: none; }
+  .dd:hover .dd-panel, .dd:focus-within .dd-panel { display: block; }
+  nav a[aria-current="page"] { color: #7C1D24; }
+  .lang a[aria-current="true"] { background: #7C1D24; color: #fff; }
+  .menu-row { display: flex; align-items: baseline; gap: .75rem; }
+  .menu-row .dots { flex: 1; border-bottom: 1px dotted #CDBFAE; transform: translateY(-5px); min-width: .75rem; }
+  tr.dzis td { color: #7C1D24; }
+  tr.dzis .dzis-znak { display: inline-block; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+</head>
+<body class="bg-bg text-ink font-sans antialiased text-[17px] leading-relaxed">
+<div class="fixed top-0 inset-x-0 z-50 h-7 bg-slate-900/90 backdrop-blur-md border-b border-white/10 text-white text-xs leading-7 px-3 sm:px-4 flex items-center justify-between gap-3" lang="pl">
+  <span class="truncate"><i class="fa-solid fa-circle-info mr-1.5 text-white/70" aria-hidden="true"></i><span class="sm:hidden">Przykład · pakiet Restauracja</span><span class="hidden sm:inline">Przykładowa realizacja · pakiet Restauracja / kilka lokali · dane fikcyjne</span></span>
+  <button type="button" data-modal-open="modal-pakiet" class="shrink-0 font-semibold underline underline-offset-2 hover:text-amber-300"><span class="sm:hidden">Co zawiera?</span><span class="hidden sm:inline">Co zawiera ten pakiet?</span></button>
+</div>
+
+<div id="modal-pakiet" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-pakiet-tytul" lang="pl" hidden>
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-9">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-bg text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <p class="text-xs uppercase tracking-[0.2em] text-wine font-bold">Strona przykładowa</p>
+    <h2 id="modal-pakiet-tytul" class="mt-2 font-display text-3xl font-semibold">Pakiet Restauracja / kilka lokali</h2>
+    <p class="mt-3 text-muted">Dla restauracji albo sieci lokali, która chce przyciągać turystów i&nbsp;gości z&nbsp;okolicy, a&nbsp;menu i&nbsp;godziny zmieniać sama, bez dzwonienia do informatyka.</p>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Menu, które zmieniają Państwo sami w&nbsp;Arkuszu Google: nowa cena widoczna na stronie po odświeżeniu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wersje niemiecka i&nbsp;angielska, każda pod własnym adresem, żeby Google pokazywał je turystom</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Osobna podstrona każdego lokalu: adres, mapa, telefon i&nbsp;godziny z&nbsp;zaznaczonym dzisiejszym dniem</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Rezerwacja stolika na maila lokalu albo przycisk do systemu rezerwacji, z&nbsp;którego Państwo już korzystają</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wydarzenia i&nbsp;sezonowe menu, wizytówka w&nbsp;Mapach Google dla każdego lokalu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wszystko z&nbsp;pakietu Firma: teksty, domena, firmowa poczta, statystyki i&nbsp;poprawki przed startem</span></li>
+    </ul>
+    <div class="mt-7 rounded-2xl bg-sand p-5">
+      <p class="font-display text-2xl font-semibold">5 900–7 900 zł <span class="font-sans text-base font-normal text-muted">jednorazowo</span></p>
+      <p class="text-[15px] text-ink/80">cena zależy od liczby lokali i&nbsp;języków</p>
+      <p class="mt-3 font-display text-xl font-semibold">+ 199 zł <span class="font-sans text-base font-normal text-muted">miesięcznie opieki</span></p>
+      <p class="text-[15px] text-ink/80">hosting, kopie zapasowe, aktualizacje i&nbsp;zmiany treści</p>
+    </div>
+    <p class="mt-5 text-[15px] text-ink/80"><i class="fa-solid fa-hand-pointer text-wine mr-2" aria-hidden="true"></i>Wypróbuj na tej stronie: przełącz język w&nbsp;nagłówku (PL / DE / EN) i&nbsp;otwórz rezerwację stolika.</p>
+    <p class="mt-4 text-sm text-muted">Restauracja, adresy, telefony, menu i&nbsp;opinie są wymyślone. Strona pokazuje, jak może wyglądać serwis Państwa restauracji.</p>
+  </div>
+</div>
+
+<div id="baner-jezyka" class="hidden bg-moss text-white text-sm" data-baner-jezyka>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
+    <p><i class="fa-solid fa-language mr-2" aria-hidden="true"></i><span data-baner-tekst></span> <a href="#" class="font-semibold underline underline-offset-2" data-baner-link></a></p>
+    <button type="button" class="w-8 h-8 rounded-full hover:bg-white/10 shrink-0" data-baner-zamknij aria-label="Zamknij"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  </div>
+</div>
+<header class="sticky top-7 z-40 bg-bg/90 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[4.5rem] flex items-center justify-between gap-3">
+    <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Gospoda Trzy Doliny – strona główna">
+      <span aria-hidden="true" class="w-10 h-10 rounded-xl bg-wine text-bg flex items-center justify-center shrink-0">
+        <svg viewBox="0 0 64 64" class="w-7 h-7" fill="currentColor"><path d="M6 48 L22 22 L32 36 L42 18 L58 48 Z"/></svg>
+      </span>
+      <span class="min-w-0 leading-tight">
+        <span class="block font-display text-xl font-semibold truncate">Trzy Doliny</span>
+        <span class="block text-[11px] uppercase tracking-[0.16em] text-muted truncate">Kuchnia sudecka</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium" aria-label="Menu">
+      <a href="index.html" class="hover:text-wine transition">Start</a>
+      <a href="menu.html" class="hover:text-wine transition" aria-current="page">Menu</a>
+      <div class="dd relative">
+        <button type="button" class="inline-flex items-center gap-1.5 py-6 hover:text-wine transition">Lokale<i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i></button>
+        <div class="dd-panel absolute left-1/2 -translate-x-1/2 top-full w-72 rounded-2xl bg-surface border border-line shadow-xl shadow-ink/10 p-2">
+          <a href="lokal-jelenia-gora.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Stare Miasto</span><span class="block text-sm text-muted font-normal">Jelenia Góra</span></a>
+          <a href="lokal-cieplice.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Cieplice Zdrój</span><span class="block text-sm text-muted font-normal">Jelenia Góra-Cieplice</span></a>
+          <a href="lokal-karpacz.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Karpacz</span><span class="block text-sm text-muted font-normal">Karpacz</span></a>
+        </div>
+      </div>
+      <a href="wydarzenia.html" class="hover:text-wine transition">Wydarzenia</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <div class="lang hidden sm:flex items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold" role="group" aria-label="Wybór języka">
+        <a href="menu.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="true" class="px-2.5 py-1.5 rounded-full">PL</a>
+        <a href="de/menu.html" hreflang="de" lang="de" data-lang="de" class="px-2.5 py-1.5 rounded-full">DE</a>
+        <a href="en/menu.html" hreflang="en" lang="en" data-lang="en" class="px-2.5 py-1.5 rounded-full">EN</a>
+      </div>
+      <button type="button" data-rez-open class="hidden md:inline-flex items-center rounded-full bg-wine hover:bg-winedark text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap transition">Zarezerwuj stolik</button>
+      
+      <button type="button" class="lg:hidden w-11 h-11 rounded-full border border-line bg-surface flex items-center justify-center" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Menu nawigacji">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div id="menu-mobile" class="lg:hidden border-t border-line bg-bg max-h-[calc(100vh-7rem)] overflow-y-auto" data-panel hidden>
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 grid gap-1 text-lg font-medium" aria-label="Menu">
+      <a href="index.html" class="py-2.5">Start</a>
+      <a href="menu.html" class="py-2.5" aria-current="page">Menu</a>
+      <p class="pt-3 pb-1 text-xs uppercase tracking-[0.16em] text-muted">Lokale</p>
+      <a href="lokal-jelenia-gora.html" class="py-2 pl-4 text-base">Stare Miasto <span class="text-muted">· Jelenia Góra</span></a>
+      <a href="lokal-cieplice.html" class="py-2 pl-4 text-base">Cieplice Zdrój</a>
+      <a href="lokal-karpacz.html" class="py-2 pl-4 text-base">Karpacz</a>
+      <a href="wydarzenia.html" class="py-2.5">Wydarzenia</a>
+      <a href="rezerwacja.html" class="py-2.5">Rezerwacja</a>
+      <div class="lang mt-3 flex items-center gap-1 rounded-full border border-line bg-surface p-1 self-start text-sm font-semibold" role="group" aria-label="Wybór języka">
+        <a href="menu.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="true" class="px-4 py-2 rounded-full">Polski</a>
+        <a href="de/menu.html" hreflang="de" lang="de" data-lang="de" class="px-4 py-2 rounded-full">Deutsch</a>
+        <a href="en/menu.html" hreflang="en" lang="en" data-lang="en" class="px-4 py-2 rounded-full">English</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+<section class="border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-10 md:pt-16">
+    <p class="text-xs uppercase tracking-[0.24em] text-wine font-semibold">Karta dań</p>
+    <h1 class="mt-3 font-display font-semibold text-5xl md:text-6xl">Menu</h1>
+    <p class="mt-5 text-lg text-ink/80 max-w-2xl">Ta sama karta we wszystkich trzech lokalach. Ceny w&nbsp;złotych, z&nbsp;VAT.</p>
+    <p class="mt-3 text-[15px] text-muted flex gap-2 max-w-2xl"><i class="fa-solid fa-circle-info text-wine mt-1" aria-hidden="true"></i>Masz alergię albo specjalną dietę? Powiedz obsłudze, a&nbsp;kuchnia doradzi.</p>
+  </div>
+  <nav class="sticky top-[6.25rem] z-20 bg-bg/95 backdrop-blur border-t border-line" aria-label="Karta dań">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex gap-2 overflow-x-auto [scrollbar-width:none]" data-menu-nav></div>
+  </nav>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16 grid lg:grid-cols-12 gap-12 [&>*]:min-w-0">
+  <div class="lg:col-span-8">
+    <p class="mb-6 hidden rounded-2xl border border-moss/30 bg-moss/10 text-moss text-sm font-semibold px-4 py-3" data-menu-status role="status"></p>
+    <div data-menu class="space-y-14" aria-live="polite"></div>
+    <noscript><p class="text-muted">Menu wyświetla się po włączeniu JavaScript.</p></noscript>
+  </div>
+  <aside class="hidden lg:block lg:col-span-4">
+    <div class="sticky top-44 space-y-4">
+      <div class="rounded-3xl overflow-hidden border border-line aspect-[4/5]"><img src="img/gulasz.webp" alt="Gulasz z jelenia" class="w-full h-full object-cover" loading="lazy"></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-3xl overflow-hidden border border-line aspect-square"><img src="img/pierogi.webp" alt="Pierogi lepione na miejscu" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="rounded-3xl overflow-hidden border border-line aspect-square"><img src="img/piwa.webp" alt="Piwa rzemieślnicze w szklankach" class="w-full h-full object-cover" loading="lazy"></div>
+      </div>
+      <button type="button" data-rez-open class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-7 py-4 font-semibold transition"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Zarezerwuj stolik</button>
+    </div>
+  </aside>
+</section>
+</main>
+
+<script type="application/json" id="menu-dane">[{"kategoria": "Przystawki", "nazwa_pl": "Deska karkonoskich serów", "nazwa_de": "Käseplatte aus dem Riesengebirge", "nazwa_en": "Karkonosze cheese board", "opis_pl": "Sery z małych serowarni z Kotliny Jeleniogórskiej, miód gryczany, orzechy", "opis_de": "Käse aus kleinen Käsereien im Hirschberger Tal, Buchweizenhonig, Nüsse", "opis_en": "Cheeses from small dairies in the Jelenia Góra Valley, buckwheat honey, nuts", "cena": "42", "dostepne": "tak"}, {"kategoria": "Przystawki", "nazwa_pl": "Tatar wołowy", "nazwa_de": "Rindertatar", "nazwa_en": "Beef tartare", "opis_pl": "Siekana polędwica, marynowane grzyby, żółtko, pieczywo na zakwasie", "opis_de": "Gehacktes Rinderfilet, eingelegte Pilze, Eigelb, Sauerteigbrot", "opis_en": "Hand-chopped beef fillet, pickled mushrooms, egg yolk, sourdough bread", "cena": "46", "dostepne": "tak"}, {"kategoria": "Przystawki", "nazwa_pl": "Śledź w oleju lnianym", "nazwa_de": "Hering in Leinöl", "nazwa_en": "Herring in linseed oil", "opis_pl": "Z cebulą, jabłkiem i ziemniakami z wody", "opis_de": "Mit Zwiebeln, Apfel und Salzkartoffeln", "opis_en": "With onion, apple and boiled potatoes", "cena": "28", "dostepne": "tak"}, {"kategoria": "Przystawki", "nazwa_pl": "Domowy smalec", "nazwa_de": "Hausgemachtes Griebenschmalz", "nazwa_en": "Homemade lard spread", "opis_pl": "Z ogórkiem kiszonym i chlebem na zakwasie", "opis_de": "Mit Salzgurke und Sauerteigbrot", "opis_en": "With pickled cucumber and sourdough bread", "cena": "18", "dostepne": "tak"}, {"kategoria": "Zupy", "nazwa_pl": "Kwaśnica karkonoska", "nazwa_de": "Sauerkrautsuppe nach Riesengebirgsart", "nazwa_en": "Karkonosze sauerkraut soup", "opis_pl": "Na wędzonych żeberkach, z ziemniakami", "opis_de": "Mit geräucherten Rippchen und Kartoffeln", "opis_en": "With smoked ribs and potatoes", "cena": "26", "dostepne": "tak"}, {"kategoria": "Zupy", "nazwa_pl": "Zupa grzybowa", "nazwa_de": "Waldpilzsuppe", "nazwa_en": "Wild mushroom soup", "opis_pl": "Z leśnych grzybów, z łazankami", "opis_de": "Aus Waldpilzen, mit hausgemachten Nudeln", "opis_en": "Made with forest mushrooms, served with homemade noodles", "cena": "24", "dostepne": "tak"}, {"kategoria": "Zupy", "nazwa_pl": "Żurek na zakwasie", "nazwa_de": "Saure Mehlsuppe (Żurek)", "nazwa_en": "Sour rye soup (żurek)", "opis_pl": "Z jajkiem i białą kiełbasą", "opis_de": "Mit Ei und Weißwurst", "opis_en": "With egg and white sausage", "cena": "24", "dostepne": "tak"}, {"kategoria": "Zupy", "nazwa_pl": "Rosół z kury zagrodowej", "nazwa_de": "Hühnerbrühe vom Landhuhn", "nazwa_en": "Free-range chicken broth", "opis_pl": "Z domowym makaronem i natką pietruszki", "opis_de": "Mit hausgemachten Nudeln und Petersilie", "opis_en": "With homemade noodles and parsley", "cena": "19", "dostepne": "tak"}, {"kategoria": "Dania główne", "nazwa_pl": "Gulasz z jelenia", "nazwa_de": "Hirschgulasch", "nazwa_en": "Venison goulash", "opis_pl": "Z knedlikami i modrą kapustą", "opis_de": "Mit böhmischen Knödeln und Rotkohl", "opis_en": "With Bohemian dumplings and red cabbage", "cena": "64", "dostepne": "tak"}, {"kategoria": "Dania główne", "nazwa_pl": "Pstrąg z karkonoskich stawów", "nazwa_de": "Forelle aus dem Riesengebirge", "nazwa_en": "Karkonosze trout", "opis_pl": "Pieczony w całości, z masłem ziołowym i warzywami", "opis_de": "Im Ganzen gebraten, mit Kräuterbutter und Gemüse", "opis_en": "Roasted whole, with herb butter and vegetables", "cena": "58", "dostepne": "tak"}, {"kategoria": "Dania główne", "nazwa_pl": "Polędwiczka w sosie kurkowym", "nazwa_de": "Schweinefilet in Pfifferlingsoße", "nazwa_en": "Pork tenderloin in chanterelle sauce", "opis_pl": "Z ziemniakami opiekanymi z koperkiem", "opis_de": "Mit gebratenen Dillkartoffeln", "opis_en": "With roast potatoes and dill", "cena": "59", "dostepne": "tak"}, {"kategoria": "Dania główne", "nazwa_pl": "Kaczka pieczona z jabłkiem", "nazwa_de": "Ofenente mit Apfel", "nazwa_en": "Roast duck with apple", "opis_pl": "Z kluskami śląskimi i buraczkami", "opis_de": "Mit schlesischen Klößen und Roter Bete", "opis_en": "With Silesian potato dumplings and beetroot", "cena": "69", "dostepne": "tak"}, {"kategoria": "Dania główne", "nazwa_pl": "Placki ziemniaczane z gulaszem", "nazwa_de": "Kartoffelpuffer mit Gulasch", "nazwa_en": "Potato pancakes with goulash", "opis_pl": "Chrupiące placki, gulasz wołowy, śmietana", "opis_de": "Knusprige Puffer, Rindergulasch, saure Sahne", "opis_en": "Crispy pancakes, beef goulash, sour cream", "cena": "44", "dostepne": "tak"}, {"kategoria": "Dania wegetariańskie", "nazwa_pl": "Pierogi ruskie", "nazwa_de": "Piroggen mit Kartoffel-Quark-Füllung", "nazwa_en": "Pierogi with potato and cheese", "opis_pl": "Lepione na miejscu, z cebulką", "opis_de": "Bei uns von Hand gemacht, mit Röstzwiebeln", "opis_en": "Made by hand in our kitchen, topped with fried onion", "cena": "34", "dostepne": "tak"}, {"kategoria": "Dania wegetariańskie", "nazwa_pl": "Pierogi z kapustą i grzybami", "nazwa_de": "Piroggen mit Sauerkraut und Pilzen", "nazwa_en": "Pierogi with sauerkraut and mushrooms", "opis_pl": "Z kiszonej kapusty i leśnych grzybów", "opis_de": "Gefüllt mit Sauerkraut und Waldpilzen", "opis_en": "Filled with sauerkraut and forest mushrooms", "cena": "36", "dostepne": "tak"}, {"kategoria": "Dania wegetariańskie", "nazwa_pl": "Placki ziemniaczane ze śmietaną", "nazwa_de": "Kartoffelpuffer mit saurer Sahne", "nazwa_en": "Potato pancakes with sour cream", "opis_pl": "Ze szczypiorkiem", "opis_de": "Mit Schnittlauch", "opis_en": "With chives", "cena": "32", "dostepne": "tak"}, {"kategoria": "Dania wegetariańskie", "nazwa_pl": "Pęczotto z leśnymi grzybami", "nazwa_de": "Graupenrisotto mit Waldpilzen", "nazwa_en": "Pearl barley risotto with wild mushrooms", "opis_pl": "Kasza pęczak, grzyby, ser górski", "opis_de": "Perlgraupen, Pilze, Bergkäse", "opis_en": "Pearl barley, mushrooms, mountain cheese", "cena": "38", "dostepne": "tak"}, {"kategoria": "Desery", "nazwa_pl": "Szarlotka na ciepło", "nazwa_de": "Warmer Apfelkuchen", "nazwa_en": "Warm apple cake", "opis_pl": "Z lodami waniliowymi", "opis_de": "Mit Vanilleeis", "opis_en": "With vanilla ice cream", "cena": "22", "dostepne": "tak"}, {"kategoria": "Desery", "nazwa_pl": "Sernik z jagodami", "nazwa_de": "Käsekuchen mit Heidelbeeren", "nazwa_en": "Cheesecake with blueberries", "opis_pl": "Na kruchym spodzie", "opis_de": "Auf Mürbeteig", "opis_en": "On a shortcrust base", "cena": "21", "dostepne": "tak"}, {"kategoria": "Desery", "nazwa_pl": "Racuchy z jabłkami", "nazwa_de": "Apfelpfannkuchen", "nazwa_en": "Apple fritters", "opis_pl": "Z cukrem pudrem i konfiturą", "opis_de": "Mit Puderzucker und Konfitüre", "opis_en": "With icing sugar and jam", "cena": "19", "dostepne": "tak"}, {"kategoria": "Napoje i piwa", "nazwa_pl": "Piwo rzemieślnicze z regionu 0,5 l", "nazwa_de": "Regionales Craft-Bier 0,5 l", "nazwa_en": "Local craft beer, 0.5 l", "opis_pl": "Zapytaj o dzisiejszy wybór z beczki", "opis_de": "Fragen Sie nach der heutigen Auswahl vom Fass", "opis_en": "Ask about today's draught selection", "cena": "18", "dostepne": "tak"}, {"kategoria": "Napoje i piwa", "nazwa_pl": "Deska degustacyjna piw", "nazwa_de": "Bierprobe", "nazwa_en": "Beer flight", "opis_pl": "Cztery piwa po 0,15 l", "opis_de": "Vier Sorten zu je 0,15 l", "opis_en": "Four beers, 0.15 l each", "cena": "29", "dostepne": "tak"}, {"kategoria": "Napoje i piwa", "nazwa_pl": "Kompot domowy", "nazwa_de": "Hausgemachter Kompott", "nazwa_en": "Homemade fruit compote", "opis_pl": "Z owoców sezonowych, dzbanek 0,5 l", "opis_de": "Fruchtgetränk aus Saisonobst, Karaffe 0,5 l", "opis_en": "A traditional seasonal fruit drink, 0.5 l jug", "cena": "9", "dostepne": "tak"}, {"kategoria": "Napoje i piwa", "nazwa_pl": "Herbata z sokiem malinowym", "nazwa_de": "Tee mit Himbeersirup", "nazwa_en": "Tea with raspberry syrup", "opis_pl": "Na rozgrzanie po szlaku", "opis_de": "Zum Aufwärmen nach der Wanderung", "opis_en": "To warm up after a hike", "cena": "12", "dostepne": "tak"}, {"kategoria": "Napoje i piwa", "nazwa_pl": "Grzaniec", "nazwa_de": "Glühwein", "nazwa_en": "Mulled wine", "opis_pl": "Czerwone wino z korzennymi przyprawami, sezon zimowy", "opis_de": "Rotwein mit Gewürzen, in der Wintersaison", "opis_en": "Red wine with warm spices, winter season", "cena": "16", "dostepne": "tak"}]</script>
+<footer class="bg-oak text-bg/75 text-[15px]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <p class="font-display text-2xl font-semibold text-bg">Trzy Doliny</p>
+      <p class="mt-1 text-[11px] uppercase tracking-[0.16em] text-bg/50">Gospoda · Kuchnia sudecka</p>
+      <p class="mt-5">Kuchnia Sudetów w&nbsp;Jeleniej Górze, Cieplicach i&nbsp;Karpaczu. Gotujemy z&nbsp;produktów od rolników, serowarów i&nbsp;hodowców ryb z&nbsp;regionu.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-jelenia-gora.html" class="hover:underline">Stare Miasto</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Jelenia Góra</p>
+      <p class="mt-3">ul. Kamienicza 5, 58-500 Jelenia Góra</p>
+      <a href="tel:+48750000021" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 21</a>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-cieplice.html" class="hover:underline">Cieplice Zdrój</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Jelenia Góra-Cieplice</p>
+      <p class="mt-3">ul. Zdrojowa Polana 4, 58-560 Jelenia Góra-Cieplice</p>
+      <a href="tel:+48750000022" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 22</a>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-karpacz.html" class="hover:underline">Karpacz</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Karpacz</p>
+      <p class="mt-3">ul. Pod Śnieżnymi Kotłami 21, 58-540 Karpacz</p>
+      <a href="tel:+48750000023" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 23</a>
+    </div>
+  </div>
+  <div class="border-t border-bg/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row gap-3 sm:items-center justify-between text-xs text-bg/50">
+      <p>© 2026 Gospoda Trzy Doliny · Strona przykładowa, wszystkie dane są fikcyjne · <span class="[overflow-wrap:anywhere]">rezerwacje@trzydoliny.example</span></p>
+      <p class="lang flex gap-1"><a href="menu.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="true" class="px-2 py-1 rounded-full hover:text-bg">Polski</a><a href="de/menu.html" hreflang="de" lang="de" data-lang="de" class="px-2 py-1 rounded-full hover:text-bg">Deutsch</a><a href="en/menu.html" hreflang="en" lang="en" data-lang="en" class="px-2 py-1 rounded-full hover:text-bg">English</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 inset-x-0 z-30 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-bg/90 backdrop-blur-xl border-t border-line grid grid-cols-2 gap-2">
+  <a href="menu.html" class="flex items-center justify-center gap-2 rounded-2xl border border-ink/15 bg-surface py-3.5 font-semibold whitespace-nowrap"><i class="fa-solid fa-utensils text-wine" aria-hidden="true"></i>Menu</a>
+  <button type="button" data-rez-open class="flex items-center justify-center gap-2 rounded-2xl bg-wine text-white py-3.5 font-semibold whitespace-nowrap"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Rezerwacja</button>
+  
+</div>
+<div class="md:hidden h-20" aria-hidden="true"></div>
+
+<div id="modal-rezerwacja" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-rez-tytul" hidden>
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-lg max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-8">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-bg text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <h2 id="modal-rez-tytul" class="font-display text-3xl font-semibold pr-10">Rezerwacja stolika</h2>
+    <p class="mt-2 text-muted text-[15px]">Potwierdzimy rezerwację SMS-em albo telefonicznie.</p>
+    <div class="mt-6"><form class="block" data-demo-form novalidate>
+  <div data-form-fields>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Lokal</span>
+        <select name="lokal" data-rez-lokal class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option value="jg">Stare Miasto · Jelenia Góra</option>
+          <option value="cieplice">Cieplice Zdrój</option>
+          <option value="karpacz">Karpacz</option>
+        </select></label>
+      <label class="block"><span class="text-sm font-semibold">Data *</span>
+        <input type="date" name="data" required data-rez-data class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block"><span class="text-sm font-semibold">Godzina *</span>
+        <select name="godzina" required class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option>
+          <option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
+          <option selected>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+        </select></label>
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Liczba gości</span>
+        <select name="osoby" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+        </select>
+        <span class="mt-1 block text-xs text-muted">więcej niż 12: zadzwoń</span></label>
+      <label class="block"><span class="text-sm font-semibold">Imię i&nbsp;nazwisko *</span>
+        <input name="imie" required autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block"><span class="text-sm font-semibold">Telefon *</span>
+        <input name="telefon" type="tel" required autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Uwagi</span>
+        <textarea name="uwagi" rows="2" placeholder="Np. krzesełko dla dziecka, stolik przy kominku, alergie" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></textarea></label>
+    </div>
+    <p class="mt-3 text-sm text-red-700 hidden" data-form-error role="alert">Wybierz datę i&nbsp;godzinę oraz podaj imię i&nbsp;telefon.</p>
+    <button type="submit" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-8 py-4 font-semibold transition">Potwierdź rezerwację</button>
+  </div>
+  <div class="hidden text-center py-4" data-form-done role="status" tabindex="-1">
+    <span class="mx-auto w-14 h-14 rounded-full bg-sand text-wine flex items-center justify-center text-2xl"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span>
+    <p class="mt-5 font-display text-2xl font-semibold">To strona przykładowa</p>
+    <p class="mt-3 text-muted max-w-md mx-auto">W&nbsp;wersji dla Państwa restauracji ta rezerwacja trafi od razu na maila lokalu albo do systemu rezerwacji, z&nbsp;którego Państwo już korzystają.</p>
+    <button type="button" class="mt-6 text-wine font-semibold underline underline-offset-4" data-form-reset>Nowa rezerwacja</button>
+  </div>
+</form>
+</div>
+  </div>
+</div>
+
+<script src="js/site.js"></script>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

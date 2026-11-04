@@ -1,0 +1,322 @@
+<!doctype html>
+<!-- Plik wygenerowany z przyklady/_zrodla/firma/strony/cennik.html. Zmieniaj szablon i uruchom: py -m src.przyklady -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cennik biura rachunkowego – jak liczymy cenę | Rubryka</title>
+<meta name="description" content="Przejrzysta wycena księgowości: od czego zależy cena, pakiety od 650 zł netto miesięcznie i kalkulator orientacyjnej ceny.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314213A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23E0A46B' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { paper: "#F6F4EF", surface: "#FFFFFF", ink: "#14213A", muted: "#5B6474", line: "#DDD7CC",
+              copper: "#B4692B", copperdark: "#93531F", coppersoft: "#F4E8DA", navy: "#0F1B2E", navysoft: "#E8ECF2" },
+    fontFamily: { serif: ["Libre Baskerville", "Georgia", "serif"], sans: ["Inter", "system-ui", "sans-serif"] }
+  } } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { padding-top: 28px; overflow-x: hidden; }
+  section[id], form[id], div[id].kotwica { scroll-margin-top: 7.5rem; }
+  .modal[hidden], [data-panel][hidden] { display: none; }
+  .dd-panel { display: none; }
+  .dd:hover .dd-panel, .dd:focus-within .dd-panel { display: block; }
+  nav a[aria-current="page"] { color: #B4692B; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(45deg); }
+  .ledger { display: flex; align-items: baseline; gap: .75rem; }
+  .ledger .dots { flex: 1; border-bottom: 1px dotted #C8C1B4; transform: translateY(-4px); min-width: .75rem; }
+  input[type=range] { accent-color: #B4692B; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+</head>
+<body class="bg-paper text-ink font-sans antialiased text-[17px] leading-relaxed">
+<div class="fixed top-0 inset-x-0 z-50 h-7 bg-slate-900/90 backdrop-blur-md border-b border-white/10 text-white text-xs leading-7 px-3 sm:px-4 flex items-center justify-between gap-3">
+  <span class="truncate"><i class="fa-solid fa-circle-info mr-1.5 text-white/70" aria-hidden="true"></i><span class="sm:hidden">Przykład · pakiet Firma</span><span class="hidden sm:inline">Przykładowa realizacja · pakiet Firma · dane fikcyjne</span></span>
+  <button type="button" data-modal-open="modal-pakiet" class="shrink-0 font-semibold underline underline-offset-2 hover:text-amber-300"><span class="sm:hidden">Co zawiera?</span><span class="hidden sm:inline">Co zawiera ten pakiet?</span></button>
+</div>
+
+<div id="modal-pakiet" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-pakiet-tytul" hidden>
+  <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-9">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-paper text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <p class="text-xs uppercase tracking-[0.2em] text-copper font-bold">Strona przykładowa</p>
+    <h2 id="modal-pakiet-tytul" class="mt-2 font-serif text-3xl">Pakiet Firma</h2>
+    <p class="mt-3 text-muted">Dla spółki albo firmy z&nbsp;zespołem, która potrzebuje strony budującej zaufanie u&nbsp;klientów, banków i&nbsp;kontrahentów, a&nbsp;nie tylko wizytówki z&nbsp;telefonem.</p>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>5–8 podstron, w&nbsp;tym osobna strona dla każdej kluczowej usługi, żeby klient znalazł ją w&nbsp;Google</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Teksty napisane pod Państwa firmę po rozmowie, a&nbsp;nie ogólniki z&nbsp;szablonu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Cennik albo kalkulator wyceny, zespół, pytania i&nbsp;odpowiedzi, sekcja zaufania</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Formularz kontaktowy z&nbsp;powiadomieniem na firmowego maila</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Własna domena i&nbsp;firmowa poczta, uporządkowana wizytówka w&nbsp;Mapach Google</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Statystyki odwiedzin i&nbsp;dwie rundy poprawek przed startem</span></li>
+    </ul>
+    <div class="mt-7 rounded-2xl bg-coppersoft p-5">
+      <p class="font-serif text-2xl">3 900 zł <span class="font-sans text-base text-muted">jednorazowo</span></p>
+      <p class="mt-1 font-serif text-xl">+ 149 zł <span class="font-sans text-base text-muted">miesięcznie opieki</span></p>
+      <p class="mt-2 text-[15px] text-ink/80">Opieka to hosting, kopie zapasowe, aktualizacje i&nbsp;drobne zmiany treści, bez szukania informatyka.</p>
+    </div>
+    <p class="mt-5 text-sm text-muted">Firma, osoby, adresy, telefony i&nbsp;opinie na tej stronie są wymyślone. Strona pokazuje, jak może wyglądać serwis Państwa firmy.</p>
+  </div>
+</div>
+
+<header class="sticky top-7 z-40 bg-paper/90 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[4.5rem] flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Rubryka Księgowość i Podatki – strona główna">
+      <span aria-hidden="true" class="w-10 h-10 rounded-lg bg-ink text-[#E0A46B] font-serif text-2xl font-bold flex items-center justify-center shrink-0">R</span>
+      <span class="min-w-0 leading-tight">
+        <span class="block font-serif text-xl font-bold tracking-tight">Rubryka</span>
+        <span class="block text-[11px] uppercase tracking-[0.16em] text-muted truncate">Księgowość i&nbsp;Podatki</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium" aria-label="Menu główne">
+      <div class="dd relative">
+        <a href="oferta.html" class="inline-flex items-center gap-1.5 py-6 hover:text-copper transition">Oferta<i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i></a>
+        <div class="dd-panel absolute left-1/2 -translate-x-1/2 top-full w-80 rounded-2xl bg-surface border border-line shadow-xl shadow-ink/10 p-2">
+          <a href="ksiegowosc-spolek.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Księgowość spółek</span><span class="block text-sm text-muted font-normal">Pełna księgowość, JPK, sprawozdania</span></a>
+          <a href="kadry-i-place.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Kadry i&nbsp;płace</span><span class="block text-sm text-muted font-normal">Listy płac, ZUS, PPK, akta osobowe</span></a>
+          <a href="doradztwo-podatkowe.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Doradztwo podatkowe</span><span class="block text-sm text-muted font-normal">Optymalizacja, ulgi, kontrole</span></a>
+          <a href="oferta.html" class="flex items-center justify-between rounded-xl px-4 py-3 mt-1 border-t border-line text-copper font-semibold hover:bg-paper">Wszystkie usługi<i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <a href="cennik.html" class="hover:text-copper transition" aria-current="page">Cennik</a>
+      <a href="zespol.html" class="hover:text-copper transition">Zespół</a>
+      <a href="faq.html" class="hover:text-copper transition">Pytania</a>
+      <a href="kontakt.html" class="hover:text-copper transition">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <a href="tel:+48750000010" class="hidden xl:inline-flex items-center gap-2 px-3 text-[15px] font-semibold whitespace-nowrap hover:text-copper"><i class="fa-solid fa-phone text-copper text-sm" aria-hidden="true"></i>75 000 00 10</a>
+      <a href="kontakt.html#wycena" class="hidden sm:inline-flex items-center rounded-full bg-copper hover:bg-copperdark text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap transition">Bezpłatna wycena</a>
+      <button type="button" class="lg:hidden w-11 h-11 rounded-full border border-line bg-surface flex items-center justify-center" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div id="menu-mobile" class="lg:hidden border-t border-line bg-paper max-h-[calc(100vh-7rem)] overflow-y-auto" data-panel hidden>
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 grid gap-1 text-lg font-medium" aria-label="Menu na telefonie">
+      <a href="index.html" class="py-2.5">Strona główna</a>
+      <a href="oferta.html" class="py-2.5">Oferta</a>
+      <a href="ksiegowosc-spolek.html" class="py-2 pl-4 text-base text-muted">Księgowość spółek</a>
+      <a href="kadry-i-place.html" class="py-2 pl-4 text-base text-muted">Kadry i&nbsp;płace</a>
+      <a href="doradztwo-podatkowe.html" class="py-2 pl-4 text-base text-muted">Doradztwo podatkowe</a>
+      <a href="cennik.html" class="py-2.5" aria-current="page">Cennik</a>
+      <a href="zespol.html" class="py-2.5">Zespół</a>
+      <a href="faq.html" class="py-2.5">Pytania</a>
+      <a href="kontakt.html" class="py-2.5">Kontakt</a>
+      <a href="kontakt.html#wycena" class="mt-3 rounded-full bg-copper text-white text-center py-3.5 font-semibold">Bezpłatna wycena</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+<section class="border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-14 md:pt-16 md:pb-20">
+    <nav class="text-sm text-muted" aria-label="Ścieżka"><a href="index.html" class="hover:text-copper">Strona główna</a><span class="mx-2" aria-hidden="true">/</span><span class="text-ink">Cennik</span></nav>
+    <h1 class="mt-6 font-serif text-4xl md:text-[3.2rem] leading-[1.1] max-w-3xl">Jak liczymy cenę</h1>
+    <p class="mt-6 text-lg text-ink/80 max-w-2xl">Cena księgowości zależy od pracy, którą co miesiąc wykonujemy dla Twojej firmy. Pokazujemy, od czego to zależy, zanim w&nbsp;ogóle zapytasz. Wszystkie kwoty są netto.</p>
+  </div>
+</section>
+
+<!-- OD CZEGO ZALEŻY -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20">
+  <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <li class="rounded-2xl border border-line bg-surface p-6"><p class="font-serif text-2xl text-copper">1</p><p class="mt-2 font-semibold">Liczba dokumentów</p><p class="mt-1.5 text-[15px] text-muted">Faktury, rachunki, wyciągi. To największa część pracy.</p></li>
+    <li class="rounded-2xl border border-line bg-surface p-6"><p class="font-serif text-2xl text-copper">2</p><p class="mt-2 font-semibold">Pracownicy</p><p class="mt-1.5 text-[15px] text-muted">Każda osoba na liście płac to umowa, składki i&nbsp;deklaracje.</p></li>
+    <li class="rounded-2xl border border-line bg-surface p-6"><p class="font-serif text-2xl text-copper">3</p><p class="mt-2 font-semibold">Forma prawna</p><p class="mt-1.5 text-[15px] text-muted">Pełna księgowość spółki to więcej obowiązków niż ryczałt.</p></li>
+    <li class="rounded-2xl border border-line bg-surface p-6"><p class="font-serif text-2xl text-copper">4</p><p class="mt-2 font-semibold">Handel zagraniczny</p><p class="mt-1.5 text-[15px] text-muted">Sprzedaż do UE, import i&nbsp;procedura OSS wymagają dodatkowych rozliczeń.</p></li>
+  </ul>
+</section>
+
+<!-- KALKULATOR -->
+<section id="kalkulator" class="bg-surface border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+    <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Kalkulator</p>
+    <h2 class="mt-3 font-serif text-3xl md:text-[2.4rem] leading-tight">Sprawdź orientacyjną cenę w&nbsp;30 sekund</h2>
+    <div class="mt-10 grid lg:grid-cols-12 gap-6">
+      <form class="lg:col-span-7 rounded-3xl border border-line bg-paper p-6 sm:p-8 space-y-8" data-calc onsubmit="return false">
+        <fieldset>
+          <legend class="font-semibold">Forma działalności</legend>
+          <div class="mt-3 grid sm:grid-cols-2 gap-3">
+            <label class="flex items-start gap-3 rounded-2xl border border-line bg-surface p-4 cursor-pointer has-[:checked]:border-copper has-[:checked]:ring-2 has-[:checked]:ring-copper/25">
+              <input type="radio" name="forma" value="spolka" class="mt-1 accent-[#B4692B]" data-base="650" data-incl="30" data-doc="7" checked>
+              <span><span class="block font-semibold">Spółka z&nbsp;o.o.</span><span class="block text-sm text-muted">pełna księgowość</span></span></label>
+            <label class="flex items-start gap-3 rounded-2xl border border-line bg-surface p-4 cursor-pointer has-[:checked]:border-copper has-[:checked]:ring-2 has-[:checked]:ring-copper/25">
+              <input type="radio" name="forma" value="osobowa" class="mt-1 accent-[#B4692B]" data-base="600" data-incl="30" data-doc="7">
+              <span><span class="block font-semibold">Spółka jawna lub komandytowa</span><span class="block text-sm text-muted">pełna księgowość</span></span></label>
+            <label class="flex items-start gap-3 rounded-2xl border border-line bg-surface p-4 cursor-pointer has-[:checked]:border-copper has-[:checked]:ring-2 has-[:checked]:ring-copper/25">
+              <input type="radio" name="forma" value="jdg-pelna" class="mt-1 accent-[#B4692B]" data-base="500" data-incl="30" data-doc="6">
+              <span><span class="block font-semibold">Jednoosobowa firma</span><span class="block text-sm text-muted">pełna księgowość</span></span></label>
+            <label class="flex items-start gap-3 rounded-2xl border border-line bg-surface p-4 cursor-pointer has-[:checked]:border-copper has-[:checked]:ring-2 has-[:checked]:ring-copper/25">
+              <input type="radio" name="forma" value="jdg-kpir" class="mt-1 accent-[#B4692B]" data-base="250" data-incl="20" data-doc="4">
+              <span><span class="block font-semibold">Jednoosobowa firma</span><span class="block text-sm text-muted">książka przychodów lub ryczałt</span></span></label>
+          </div>
+        </fieldset>
+        <div>
+          <div class="flex items-baseline justify-between gap-4"><label for="kalk-dokumenty" class="font-semibold">Dokumenty miesięcznie</label><output class="font-serif text-2xl tabular-nums" data-out="dokumenty">40</output></div>
+          <input id="kalk-dokumenty" type="range" min="10" max="300" step="5" value="40" name="dokumenty" class="mt-3 w-full">
+          <div class="mt-1 flex justify-between text-xs text-muted"><span>10</span><span>300</span></div>
+        </div>
+        <div>
+          <div class="flex items-baseline justify-between gap-4"><label for="kalk-pracownicy" class="font-semibold">Pracownicy i&nbsp;zleceniobiorcy</label><output class="font-serif text-2xl tabular-nums" data-out="pracownicy">5</output></div>
+          <input id="kalk-pracownicy" type="range" min="0" max="50" step="1" value="5" name="pracownicy" class="mt-3 w-full">
+          <div class="mt-1 flex justify-between text-xs text-muted"><span>0</span><span>50</span></div>
+        </div>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" name="zagranica" class="mt-1.5 w-4 h-4 accent-[#B4692B]">
+          <span><span class="block font-semibold">Handel zagraniczny</span><span class="block text-sm text-muted">Sprzedaż lub zakupy w&nbsp;UE, import, procedura OSS</span></span>
+        </label>
+      </form>
+      <div class="lg:col-span-5">
+        <div class="lg:sticky lg:top-32 rounded-3xl bg-ink text-white p-7 sm:p-8" aria-live="polite">
+          <p class="text-sm text-white/60">Orientacyjna cena</p>
+          <p class="mt-2 font-serif text-5xl tabular-nums leading-none">od <span data-calc-total>945</span> zł</p>
+          <p class="mt-2 text-white/60">netto miesięcznie</p>
+          <ul class="mt-7 space-y-3 text-[15px]">
+            <li class="ledger"><span class="text-white/75">Księgowość</span><span class="dots !border-white/20"></span><span class="tabular-nums whitespace-nowrap" data-calc-part="ksiegowosc">720 zł</span></li>
+            <li class="ledger"><span class="text-white/75">Kadry i&nbsp;płace</span><span class="dots !border-white/20"></span><span class="tabular-nums whitespace-nowrap" data-calc-part="kadry">225 zł</span></li>
+            <li class="ledger"><span class="text-white/75">Handel zagraniczny</span><span class="dots !border-white/20"></span><span class="tabular-nums whitespace-nowrap" data-calc-part="zagranica">0 zł</span></li>
+          </ul>
+          <a href="kontakt.html#wycena" class="mt-8 flex items-center justify-center rounded-full bg-copper hover:bg-copperdark py-4 font-semibold transition">Poproś o&nbsp;dokładną wycenę</a>
+          <p class="mt-4 text-xs text-white/50">Kalkulator podaje kwotę orientacyjną. Dokładną cenę przygotujemy w&nbsp;24 godziny, po krótkiej rozmowie o&nbsp;Twojej firmie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKIETY -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+  <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Pakiety dla spółek</p>
+  <h2 class="mt-3 font-serif text-3xl md:text-[2.4rem] leading-tight">Trzy punkty wyjścia</h2>
+  <div class="mt-12 grid lg:grid-cols-3 gap-5 items-stretch">
+    <div class="rounded-3xl border border-line bg-surface p-7 flex flex-col">
+      <h3 class="font-serif text-2xl">Start Spółka</h3>
+      <p class="mt-1 text-[15px] text-muted">Dla młodych spółek i&nbsp;małej skali</p>
+      <p class="mt-6 font-serif text-4xl">od 650 zł</p><p class="text-sm text-muted">netto miesięcznie</p>
+      <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>do 30 dokumentów</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>JPK_V7, zaliczki CIT</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>raport dla zarządu co kwartał</li>
+      </ul>
+    </div>
+    <div class="rounded-3xl border-2 border-copper bg-surface p-7 flex flex-col relative shadow-xl shadow-copper/10">
+      <span class="absolute -top-3.5 left-7 rounded-full bg-copper text-white text-xs font-semibold px-3 py-1">Najczęściej wybierany</span>
+      <h3 class="font-serif text-2xl">Rozwój</h3>
+      <p class="mt-1 text-[15px] text-muted">Dla spółek z&nbsp;zespołem i&nbsp;stałą sprzedażą</p>
+      <p class="mt-6 font-serif text-4xl">od 1 200 zł</p><p class="text-sm text-muted">netto miesięcznie</p>
+      <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>do 100 dokumentów</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>kadry i&nbsp;płace do 5 osób w&nbsp;cenie</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>raport dla zarządu co miesiąc</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>spotkanie z&nbsp;opiekunem co kwartał</li>
+      </ul>
+    </div>
+    <div class="rounded-3xl border border-line bg-surface p-7 flex flex-col">
+      <h3 class="font-serif text-2xl">Korporacyjny</h3>
+      <p class="mt-1 text-[15px] text-muted">Dla grup spółek i&nbsp;większej skali</p>
+      <p class="mt-6 font-serif text-4xl">indywidualnie</p><p class="text-sm text-muted">po analizie potrzeb</p>
+      <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>ponad 100 dokumentów</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>budżety i&nbsp;controlling</li>
+        <li class="flex gap-2"><i class="fa-solid fa-check text-copper mt-1" aria-hidden="true"></i>osobny zespół dla grupy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- W CENIE -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20 md:pb-24 grid lg:grid-cols-2 gap-6 [&>*]:min-w-0">
+  <div class="rounded-3xl bg-surface border border-line p-7 sm:p-9">
+    <h2 class="font-serif text-2xl">Zawsze w&nbsp;cenie, bez dopłat</h2>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i>Konsultacje telefoniczne i&nbsp;mailowe z&nbsp;opiekunem</li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i>Odpowiedzi na wezwania urzędu skarbowego i&nbsp;ZUS</li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i>Poprawki błędów, które popełniliśmy my</li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i>Aplikacja do przesyłania dokumentów i&nbsp;archiwum</li>
+    </ul>
+  </div>
+  <div class="rounded-3xl bg-surface border border-line p-7 sm:p-9">
+    <h2 class="font-serif text-2xl">Płatne osobno, zawsze z&nbsp;góry</h2>
+    <ul class="mt-6 space-y-4 text-[16px]">
+      <li class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3"><span>Roczne sprawozdanie finansowe</span><span class="hidden sm:block flex-1 border-b border-dotted border-[#C8C1B4] min-w-[.75rem] -translate-y-1"></span><span class="font-semibold">równowartość 1 opłaty miesięcznej</span></li>
+      <li class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3"><span>Obecność podczas kontroli</span><span class="hidden sm:block flex-1 border-b border-dotted border-[#C8C1B4] min-w-[.75rem] -translate-y-1"></span><span class="font-semibold whitespace-nowrap">250 zł / godz.</span></li>
+      <li class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3"><span>Wniosek o&nbsp;interpretację</span><span class="hidden sm:block flex-1 border-b border-dotted border-[#C8C1B4] min-w-[.75rem] -translate-y-1"></span><span class="font-semibold whitespace-nowrap">od 1 500 zł</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20 md:pb-28">
+  <div class="relative overflow-hidden rounded-[2rem] bg-ink text-white px-7 py-12 sm:px-12 md:py-14 grid md:grid-cols-12 gap-8 items-center">
+    <div aria-hidden="true" class="absolute -right-24 -top-24 w-72 h-72 rounded-full border border-white/10"></div>
+    <div aria-hidden="true" class="absolute -right-10 -top-10 w-72 h-72 rounded-full border border-white/10"></div>
+    <div class="relative md:col-span-8">
+      <p class="text-xs uppercase tracking-[0.22em] text-[#E0A46B] font-semibold">Bezpłatna wycena w&nbsp;24&nbsp;godziny</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-4xl leading-tight">Porozmawiajmy o&nbsp;księgowości Twojej firmy</h2>
+      <p class="mt-4 text-white/75 max-w-xl">Odpowiedz na kilka pytań o&nbsp;liczbę dokumentów i&nbsp;pracowników. Dostaniesz konkretną cenę, a&nbsp;nie widełki.</p>
+    </div>
+    <div class="relative md:col-span-4 flex flex-col gap-3">
+      <a href="kontakt.html#wycena" class="inline-flex items-center justify-center rounded-full bg-copper hover:bg-copperdark px-7 py-4 font-semibold transition whitespace-nowrap">Poproś o&nbsp;wycenę</a>
+      <a href="tel:+48750000010" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 hover:border-white/60 px-7 py-4 font-semibold transition whitespace-nowrap"><i class="fa-solid fa-phone text-sm" aria-hidden="true"></i>75 000 00 10</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-navy text-white/75 text-[15px]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <p class="font-serif text-2xl text-white">Rubryka</p>
+      <p class="mt-1 text-[11px] uppercase tracking-[0.16em] text-white/50">Księgowość i&nbsp;Podatki</p>
+      <p class="mt-5 max-w-sm">Biuro rachunkowe dla spółek i&nbsp;firm z&nbsp;Jeleniej Góry i&nbsp;Karkonoszy. Księgowość, kadry i&nbsp;doradztwo podatkowe w&nbsp;jednym miejscu, od 2012 roku.</p>
+      <p class="mt-6 text-sm text-white/50 leading-relaxed">Rubryka Księgowość i&nbsp;Podatki Sp. z&nbsp;o.o., ul. Złotej Jesieni 14, 58-500 Jelenia Góra<br>
+        Sąd Rejonowy dla Wrocławia-Fabrycznej we Wrocławiu, IX Wydział Gospodarczy KRS<br>
+        KRS 0000000000 · NIP 000-000-00-00 · kapitał zakładowy 50 000 zł</p>
+    </div>
+    <div class="lg:col-span-3">
+      <p class="text-white font-semibold">Usługi</p>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="ksiegowosc-spolek.html" class="hover:text-white">Księgowość spółek</a></li>
+        <li><a href="kadry-i-place.html" class="hover:text-white">Kadry i&nbsp;płace</a></li>
+        <li><a href="doradztwo-podatkowe.html" class="hover:text-white">Doradztwo podatkowe</a></li>
+        <li><a href="oferta.html" class="hover:text-white">Wszystkie usługi</a></li>
+        <li><a href="cennik.html" class="hover:text-white">Cennik i&nbsp;kalkulator</a></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-4">
+      <p class="text-white font-semibold">Kontakt</p>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="tel:+48750000010" class="text-white text-lg font-semibold tabular-nums whitespace-nowrap hover:text-[#E0A46B]">75 000 00 10</a></li>
+        <li class="[overflow-wrap:anywhere]">biuro@rubryka.example</li>
+        <li>ul. Złotej Jesieni 14, 58-500 Jelenia Góra, II&nbsp;piętro</li>
+        <li>poniedziałek–piątek, <span class="whitespace-nowrap">8:00–16:00</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row gap-2 justify-between text-xs text-white/45">
+      <p>© 2026 Rubryka · Strona przykładowa, wszystkie dane są fikcyjne</p>
+      <p><a href="faq.html" class="hover:text-white">Pytania i&nbsp;odpowiedzi</a> · <a href="kontakt.html" class="hover:text-white">Kontakt</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 inset-x-0 z-30 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-paper/90 backdrop-blur-xl border-t border-line grid grid-cols-2 gap-2">
+  <a href="tel:+48750000010" class="flex items-center justify-center gap-2 rounded-2xl border border-ink/15 bg-surface py-3.5 font-semibold whitespace-nowrap"><i class="fa-solid fa-phone text-copper" aria-hidden="true"></i>Zadzwoń</a>
+  <a href="kontakt.html#wycena" class="flex items-center justify-center gap-2 rounded-2xl bg-copper text-white py-3.5 font-semibold whitespace-nowrap">Bezpłatna wycena</a>
+</div>
+<div class="md:hidden h-20" aria-hidden="true"></div>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

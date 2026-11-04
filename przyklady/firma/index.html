@@ -1,0 +1,424 @@
+<!doctype html>
+<!-- Plik wygenerowany z przyklady/_zrodla/firma/strony/index.html. Zmieniaj szablon i uruchom: py -m src.przyklady -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Biuro rachunkowe Jelenia Góra – Rubryka Księgowość i&nbsp;Podatki Sp. z&nbsp;o.o.</title>
+<meta name="description" content="Pełna księgowość spółek, kadry i płace, doradztwo podatkowe w Jeleniej Górze. Stały opiekun, dokumenty bez papieru, OC do 1 mln zł. Strona przykładowa z fikcyjnymi danymi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314213A'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23E0A46B' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { paper: "#F6F4EF", surface: "#FFFFFF", ink: "#14213A", muted: "#5B6474", line: "#DDD7CC",
+              copper: "#B4692B", copperdark: "#93531F", coppersoft: "#F4E8DA", navy: "#0F1B2E", navysoft: "#E8ECF2" },
+    fontFamily: { serif: ["Libre Baskerville", "Georgia", "serif"], sans: ["Inter", "system-ui", "sans-serif"] }
+  } } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { padding-top: 28px; overflow-x: hidden; }
+  section[id], form[id], div[id].kotwica { scroll-margin-top: 7.5rem; }
+  .modal[hidden], [data-panel][hidden] { display: none; }
+  .dd-panel { display: none; }
+  .dd:hover .dd-panel, .dd:focus-within .dd-panel { display: block; }
+  nav a[aria-current="page"] { color: #B4692B; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(45deg); }
+  .ledger { display: flex; align-items: baseline; gap: .75rem; }
+  .ledger .dots { flex: 1; border-bottom: 1px dotted #C8C1B4; transform: translateY(-4px); min-width: .75rem; }
+  input[type=range] { accent-color: #B4692B; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+</head>
+<body class="bg-paper text-ink font-sans antialiased text-[17px] leading-relaxed">
+<div class="fixed top-0 inset-x-0 z-50 h-7 bg-slate-900/90 backdrop-blur-md border-b border-white/10 text-white text-xs leading-7 px-3 sm:px-4 flex items-center justify-between gap-3">
+  <span class="truncate"><i class="fa-solid fa-circle-info mr-1.5 text-white/70" aria-hidden="true"></i><span class="sm:hidden">Przykład · pakiet Firma</span><span class="hidden sm:inline">Przykładowa realizacja · pakiet Firma · dane fikcyjne</span></span>
+  <button type="button" data-modal-open="modal-pakiet" class="shrink-0 font-semibold underline underline-offset-2 hover:text-amber-300"><span class="sm:hidden">Co zawiera?</span><span class="hidden sm:inline">Co zawiera ten pakiet?</span></button>
+</div>
+
+<div id="modal-pakiet" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-pakiet-tytul" hidden>
+  <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-9">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-paper text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <p class="text-xs uppercase tracking-[0.2em] text-copper font-bold">Strona przykładowa</p>
+    <h2 id="modal-pakiet-tytul" class="mt-2 font-serif text-3xl">Pakiet Firma</h2>
+    <p class="mt-3 text-muted">Dla spółki albo firmy z&nbsp;zespołem, która potrzebuje strony budującej zaufanie u&nbsp;klientów, banków i&nbsp;kontrahentów, a&nbsp;nie tylko wizytówki z&nbsp;telefonem.</p>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>5–8 podstron, w&nbsp;tym osobna strona dla każdej kluczowej usługi, żeby klient znalazł ją w&nbsp;Google</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Teksty napisane pod Państwa firmę po rozmowie, a&nbsp;nie ogólniki z&nbsp;szablonu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Cennik albo kalkulator wyceny, zespół, pytania i&nbsp;odpowiedzi, sekcja zaufania</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Formularz kontaktowy z&nbsp;powiadomieniem na firmowego maila</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Własna domena i&nbsp;firmowa poczta, uporządkowana wizytówka w&nbsp;Mapach Google</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-copper mt-1.5" aria-hidden="true"></i><span>Statystyki odwiedzin i&nbsp;dwie rundy poprawek przed startem</span></li>
+    </ul>
+    <div class="mt-7 rounded-2xl bg-coppersoft p-5">
+      <p class="font-serif text-2xl">3 900 zł <span class="font-sans text-base text-muted">jednorazowo</span></p>
+      <p class="mt-1 font-serif text-xl">+ 149 zł <span class="font-sans text-base text-muted">miesięcznie opieki</span></p>
+      <p class="mt-2 text-[15px] text-ink/80">Opieka to hosting, kopie zapasowe, aktualizacje i&nbsp;drobne zmiany treści, bez szukania informatyka.</p>
+    </div>
+    <p class="mt-5 text-sm text-muted">Firma, osoby, adresy, telefony i&nbsp;opinie na tej stronie są wymyślone. Strona pokazuje, jak może wyglądać serwis Państwa firmy.</p>
+  </div>
+</div>
+
+<header class="sticky top-7 z-40 bg-paper/90 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[4.5rem] flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Rubryka Księgowość i Podatki – strona główna">
+      <span aria-hidden="true" class="w-10 h-10 rounded-lg bg-ink text-[#E0A46B] font-serif text-2xl font-bold flex items-center justify-center shrink-0">R</span>
+      <span class="min-w-0 leading-tight">
+        <span class="block font-serif text-xl font-bold tracking-tight">Rubryka</span>
+        <span class="block text-[11px] uppercase tracking-[0.16em] text-muted truncate">Księgowość i&nbsp;Podatki</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium" aria-label="Menu główne">
+      <div class="dd relative">
+        <a href="oferta.html" class="inline-flex items-center gap-1.5 py-6 hover:text-copper transition">Oferta<i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i></a>
+        <div class="dd-panel absolute left-1/2 -translate-x-1/2 top-full w-80 rounded-2xl bg-surface border border-line shadow-xl shadow-ink/10 p-2">
+          <a href="ksiegowosc-spolek.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Księgowość spółek</span><span class="block text-sm text-muted font-normal">Pełna księgowość, JPK, sprawozdania</span></a>
+          <a href="kadry-i-place.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Kadry i&nbsp;płace</span><span class="block text-sm text-muted font-normal">Listy płac, ZUS, PPK, akta osobowe</span></a>
+          <a href="doradztwo-podatkowe.html" class="block rounded-xl px-4 py-3 hover:bg-paper"><span class="block font-semibold">Doradztwo podatkowe</span><span class="block text-sm text-muted font-normal">Optymalizacja, ulgi, kontrole</span></a>
+          <a href="oferta.html" class="flex items-center justify-between rounded-xl px-4 py-3 mt-1 border-t border-line text-copper font-semibold hover:bg-paper">Wszystkie usługi<i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <a href="cennik.html" class="hover:text-copper transition">Cennik</a>
+      <a href="zespol.html" class="hover:text-copper transition">Zespół</a>
+      <a href="faq.html" class="hover:text-copper transition">Pytania</a>
+      <a href="kontakt.html" class="hover:text-copper transition">Kontakt</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <a href="tel:+48750000010" class="hidden xl:inline-flex items-center gap-2 px-3 text-[15px] font-semibold whitespace-nowrap hover:text-copper"><i class="fa-solid fa-phone text-copper text-sm" aria-hidden="true"></i>75 000 00 10</a>
+      <a href="kontakt.html#wycena" class="hidden sm:inline-flex items-center rounded-full bg-copper hover:bg-copperdark text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap transition">Bezpłatna wycena</a>
+      <button type="button" class="lg:hidden w-11 h-11 rounded-full border border-line bg-surface flex items-center justify-center" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div id="menu-mobile" class="lg:hidden border-t border-line bg-paper max-h-[calc(100vh-7rem)] overflow-y-auto" data-panel hidden>
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 grid gap-1 text-lg font-medium" aria-label="Menu na telefonie">
+      <a href="index.html" class="py-2.5" aria-current="page">Strona główna</a>
+      <a href="oferta.html" class="py-2.5">Oferta</a>
+      <a href="ksiegowosc-spolek.html" class="py-2 pl-4 text-base text-muted">Księgowość spółek</a>
+      <a href="kadry-i-place.html" class="py-2 pl-4 text-base text-muted">Kadry i&nbsp;płace</a>
+      <a href="doradztwo-podatkowe.html" class="py-2 pl-4 text-base text-muted">Doradztwo podatkowe</a>
+      <a href="cennik.html" class="py-2.5">Cennik</a>
+      <a href="zespol.html" class="py-2.5">Zespół</a>
+      <a href="faq.html" class="py-2.5">Pytania</a>
+      <a href="kontakt.html" class="py-2.5">Kontakt</a>
+      <a href="kontakt.html#wycena" class="mt-3 rounded-full bg-copper text-white text-center py-3.5 font-semibold">Bezpłatna wycena</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+<!-- HERO -->
+<section class="relative overflow-hidden border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-16 md:pt-20 md:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6">
+      <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Biuro rachunkowe · Jelenia Góra · od 2012 roku</p>
+      <h1 class="mt-5 font-serif text-[2.35rem] leading-[1.12] sm:text-5xl md:text-[3.4rem] md:leading-[1.08]">Księgowość spółek bez niespodzianek w&nbsp;urzędzie</h1>
+      <p class="mt-6 text-lg text-ink/80 max-w-xl">Pełna księgowość, kadry i&nbsp;doradztwo podatkowe dla spółek i&nbsp;firm z&nbsp;Jeleniej Góry i&nbsp;całych Karkonoszy. Jeden stały opiekun, dokumenty bez papieru i&nbsp;raport z&nbsp;podatkami przed każdym terminem.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="kontakt.html#wycena" class="inline-flex items-center justify-center gap-2 rounded-full bg-copper hover:bg-copperdark text-white px-7 py-4 font-semibold transition whitespace-nowrap">Bezpłatna wycena<i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+        <a href="cennik.html" class="inline-flex items-center justify-center rounded-full border border-ink/15 bg-surface px-7 py-4 font-semibold transition hover:border-copper hover:text-copper whitespace-nowrap">Zobacz, jak liczymy cenę</a>
+      </div>
+      <p class="mt-7 flex gap-3 text-[15px] text-muted max-w-lg"><i class="fa-solid fa-shield-halved text-copper mt-1" aria-hidden="true"></i>Za nasze błędy odpowiadamy finansowo. Ubezpieczenie odpowiedzialności cywilnej do 1&nbsp;000&nbsp;000&nbsp;zł.</p>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="relative">
+        <div class="rounded-[2rem] overflow-hidden border border-line aspect-[4/3]">
+          <img src="img/hero.webp" alt="Dokumenty księgowe i pióro na jasnym biurku" class="w-full h-full object-cover" fetchpriority="high">
+        </div>
+        <div class="sm:absolute sm:-bottom-10 sm:-left-8 mt-4 sm:mt-0 sm:w-[22rem] rounded-2xl bg-surface border border-line shadow-2xl shadow-ink/10 p-5">
+          <div class="flex items-center justify-between">
+            <p class="text-xs uppercase tracking-[0.16em] text-muted font-semibold">Raport dla zarządu</p>
+            <p class="text-xs text-muted">październik 2026</p>
+          </div>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li class="ledger"><span>VAT do zapłaty</span><span class="dots"></span><span class="font-semibold tabular-nums whitespace-nowrap">18 420 zł</span></li>
+            <li class="ledger"><span>Zaliczka na CIT</span><span class="dots"></span><span class="font-semibold tabular-nums whitespace-nowrap">6 310 zł</span></li>
+            <li class="ledger"><span>Wynagrodzenia, 12 osób</span><span class="dots"></span><span class="font-semibold text-emerald-700 whitespace-nowrap"><i class="fa-solid fa-check text-xs mr-1" aria-hidden="true"></i>wypłacone</span></li>
+          </ul>
+          <p class="mt-4 pt-3 border-t border-line text-xs text-muted">Co miesiąc, kilka dni przed terminem płatności.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LICZBY -->
+<section class="bg-surface border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
+    <div><p class="font-serif text-4xl md:text-5xl tabular-nums">14 lat</p><p class="mt-1 text-[15px] text-muted">na rynku w&nbsp;Jeleniej Górze</p></div>
+    <div><p class="font-serif text-4xl md:text-5xl tabular-nums">240+</p><p class="mt-1 text-[15px] text-muted">firm pod stałą opieką</p></div>
+    <div><p class="font-serif text-4xl md:text-5xl tabular-nums">7 osób</p><p class="mt-1 text-[15px] text-muted">w&nbsp;zespole, w&nbsp;tym doradczyni podatkowa</p></div>
+    <div><p class="font-serif text-4xl md:text-5xl tabular-nums">1 mln zł</p><p class="mt-1 text-[15px] text-muted">ubezpieczenia OC zawodowego</p></div>
+  </div>
+</section>
+
+<!-- FILARY -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+  <div class="grid lg:grid-cols-12 gap-6 items-end">
+    <div class="lg:col-span-7">
+      <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Usługi</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-[2.6rem] leading-tight">Trzy obszary, w&nbsp;których przejmujemy całą pracę</h2>
+    </div>
+    <p class="lg:col-span-5 text-muted">Możesz powierzyć nam jeden z&nbsp;nich albo wszystkie. Wtedy księgowość, płace i&nbsp;podatki prowadzi zespół, który rozmawia ze sobą codziennie.</p>
+  </div>
+  <div class="mt-12 grid md:grid-cols-3 gap-5">
+    <a href="ksiegowosc-spolek.html" class="group rounded-3xl bg-surface border border-line overflow-hidden transition hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
+      <div class="aspect-[16/10] overflow-hidden"><img src="img/ksiegowosc.webp" alt="Dokumenty księgowe, kalkulator i kawa" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"></div>
+      <div class="p-6 sm:p-7">
+        <h3 class="font-serif text-2xl">Księgowość spółek</h3>
+        <ul class="mt-4 space-y-2 text-[15px] text-ink/80">
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Pełna księgowość i&nbsp;JPK_V7</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Sprawozdania finansowe do KRS</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Raport miesięczny dla zarządu</li>
+        </ul>
+        <p class="mt-6 text-copper font-semibold inline-flex items-center gap-2">Szczegóły<i class="fa-solid fa-arrow-right text-sm transition group-hover:translate-x-1" aria-hidden="true"></i></p>
+      </div>
+    </a>
+    <a href="kadry-i-place.html" class="group rounded-3xl bg-surface border border-line overflow-hidden transition hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
+      <div class="aspect-[16/10] overflow-hidden"><img src="img/kadry.webp" alt="Praca na laptopie z raportem płacowym" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"></div>
+      <div class="p-6 sm:p-7">
+        <h3 class="font-serif text-2xl">Kadry i&nbsp;płace</h3>
+        <ul class="mt-4 space-y-2 text-[15px] text-ink/80">
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Listy płac, ZUS i&nbsp;PIT-11</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>PPK, PFRON, urlopy i&nbsp;zwolnienia</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Elektroniczne akta osobowe</li>
+        </ul>
+        <p class="mt-6 text-copper font-semibold inline-flex items-center gap-2">Szczegóły<i class="fa-solid fa-arrow-right text-sm transition group-hover:translate-x-1" aria-hidden="true"></i></p>
+      </div>
+    </a>
+    <a href="doradztwo-podatkowe.html" class="group rounded-3xl bg-surface border border-line overflow-hidden transition hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/10">
+      <div class="aspect-[16/10] overflow-hidden"><img src="img/doradztwo.webp" alt="Analiza wydruku z zaznaczonymi pozycjami" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"></div>
+      <div class="p-6 sm:p-7">
+        <h3 class="font-serif text-2xl">Doradztwo podatkowe</h3>
+        <ul class="mt-4 space-y-2 text-[15px] text-ink/80">
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Wybór formy opodatkowania</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Ulga B+R, IP Box, estoński CIT</li>
+          <li class="flex gap-2"><i class="fa-solid fa-minus text-copper mt-1.5 text-xs" aria-hidden="true"></i>Obecność podczas kontroli</li>
+        </ul>
+        <p class="mt-6 text-copper font-semibold inline-flex items-center gap-2">Szczegóły<i class="fa-solid fa-arrow-right text-sm transition group-hover:translate-x-1" aria-hidden="true"></i></p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- DLACZEGO MY -->
+<section class="bg-surface border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5 order-2 lg:order-1">
+      <div class="rounded-[2rem] overflow-hidden border border-line aspect-[4/3] lg:aspect-[4/5]">
+        <img src="img/e-obieg.webp" alt="Dokumenty i telefon z aplikacją do skanowania faktur" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+    <div class="lg:col-span-7 order-1 lg:order-2">
+      <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Dlaczego Rubryka</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-[2.6rem] leading-tight">Wiesz, co się dzieje w&nbsp;Twoich podatkach. Zawsze przed terminem.</h2>
+      <div class="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-9">
+        <div>
+          <span class="w-11 h-11 rounded-xl bg-coppersoft text-copper flex items-center justify-center"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></span>
+          <h3 class="mt-4 font-semibold text-lg">Stały opiekun</h3>
+          <p class="mt-1.5 text-[15px] text-muted">Jedna osoba zna Twoją firmę i&nbsp;odbiera telefon. Nie tłumaczysz wszystkiego od nowa nowemu księgowemu.</p>
+        </div>
+        <div>
+          <span class="w-11 h-11 rounded-xl bg-coppersoft text-copper flex items-center justify-center"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></span>
+          <h3 class="mt-4 font-semibold text-lg">Dokumenty bez papieru</h3>
+          <p class="mt-1.5 text-[15px] text-muted">Zdjęcie faktury w&nbsp;aplikacji albo przekazanie z&nbsp;KSeF. Nie musisz przywozić segregatorów.</p>
+        </div>
+        <div>
+          <span class="w-11 h-11 rounded-xl bg-coppersoft text-copper flex items-center justify-center"><i class="fa-solid fa-chart-column" aria-hidden="true"></i></span>
+          <h3 class="mt-4 font-semibold text-lg">Raport co miesiąc</h3>
+          <p class="mt-1.5 text-[15px] text-muted">Przychody, koszty, wynik i&nbsp;podatki do zapłaty na jednej stronie, kilka dni przed terminem.</p>
+        </div>
+        <div>
+          <span class="w-11 h-11 rounded-xl bg-coppersoft text-copper flex items-center justify-center"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+          <h3 class="mt-4 font-semibold text-lg">Jasna odpowiedzialność</h3>
+          <p class="mt-1.5 text-[15px] text-muted">Umowa z&nbsp;dokładnym zakresem usług i&nbsp;ubezpieczenie OC. Jeśli pomylimy się my, koszty pokrywamy my.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK ZACZYNAMY -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+  <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Jak zaczynamy</p>
+  <h2 class="mt-3 font-serif text-3xl md:text-[2.6rem] leading-tight max-w-2xl">Zmiana biura rachunkowego w&nbsp;czterech krokach</h2>
+  <ol class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <li class="rounded-3xl border border-line bg-surface p-6">
+      <p class="font-serif text-3xl text-copper tabular-nums">01</p>
+      <h3 class="mt-4 font-semibold text-lg">Rozmowa</h3>
+      <p class="mt-2 text-[15px] text-muted">Pytamy o&nbsp;branżę, liczbę dokumentów i&nbsp;pracowników. Trwa to około 20 minut.</p>
+    </li>
+    <li class="rounded-3xl border border-line bg-surface p-6">
+      <p class="font-serif text-3xl text-copper tabular-nums">02</p>
+      <h3 class="mt-4 font-semibold text-lg">Wycena w&nbsp;24 godziny</h3>
+      <p class="mt-2 text-[15px] text-muted">Konkretna kwota miesięczna i&nbsp;lista tego, co zawiera. Bez gwiazdek i&nbsp;dopisków drobnym drukiem.</p>
+    </li>
+    <li class="rounded-3xl border border-line bg-surface p-6">
+      <p class="font-serif text-3xl text-copper tabular-nums">03</p>
+      <h3 class="mt-4 font-semibold text-lg">Przejęcie dokumentacji</h3>
+      <p class="mt-2 text-[15px] text-muted">Sami kontaktujemy się z&nbsp;poprzednim biurem i&nbsp;odbieramy dokumenty. Także w&nbsp;trakcie roku.</p>
+    </li>
+    <li class="rounded-3xl border border-line bg-surface p-6">
+      <p class="font-serif text-3xl text-copper tabular-nums">04</p>
+      <h3 class="mt-4 font-semibold text-lg">Pierwszy raport</h3>
+      <p class="mt-2 text-[15px] text-muted">Po pierwszym miesiącu dostajesz raport i&nbsp;omawiamy go razem z&nbsp;opiekunem.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- OPINIE -->
+<section class="bg-navy text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+    <p class="text-xs uppercase tracking-[0.22em] text-[#E0A46B] font-semibold">Opinie klientów</p>
+    <h2 class="mt-3 font-serif text-3xl md:text-[2.6rem] leading-tight max-w-2xl">Firmy, które prowadzimy od lat</h2>
+    <div class="mt-12 grid md:grid-cols-3 gap-5">
+      <figure class="rounded-3xl border border-white/10 bg-white/5 p-7 flex flex-col">
+        <i class="fa-solid fa-quote-left text-2xl text-[#E0A46B]" aria-hidden="true"></i>
+        <blockquote class="mt-4 text-white/85 flex-1">„Przeszliśmy do Rubryki w&nbsp;środku roku, w&nbsp;trakcie dużej inwestycji. Przejęcie dokumentów zajęło tydzień i&nbsp;nikt w&nbsp;firmie tego nie odczuł.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-white/10"><span class="block font-semibold">Krzysztof M.</span><span class="block text-sm text-white/55">prezes spółki produkcyjnej</span></figcaption>
+      </figure>
+      <figure class="rounded-3xl border border-white/10 bg-white/5 p-7 flex flex-col">
+        <i class="fa-solid fa-quote-left text-2xl text-[#E0A46B]" aria-hidden="true"></i>
+        <blockquote class="mt-4 text-white/85 flex-1">„Raport co miesiąc to coś, czego brakowało mi przez lata. Wiem, ile zapłacę podatku, zanim przyjdzie termin, a&nbsp;nie dzień przed.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-white/10"><span class="block font-semibold">Anna D.</span><span class="block text-sm text-white/55">właścicielka hotelu w&nbsp;Karpaczu</span></figcaption>
+      </figure>
+      <figure class="rounded-3xl border border-white/10 bg-white/5 p-7 flex flex-col">
+        <i class="fa-solid fa-quote-left text-2xl text-[#E0A46B]" aria-hidden="true"></i>
+        <blockquote class="mt-4 text-white/85 flex-1">„Podczas kontroli skarbowej pani doradca była z&nbsp;nami na każdym spotkaniu. Kontrola zakończyła się bez żadnych zastrzeżeń.”</blockquote>
+        <figcaption class="mt-6 pt-5 border-t border-white/10"><span class="block font-semibold">Tomasz W.</span><span class="block text-sm text-white/55">wspólnik firmy budowlanej</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- GWARANCJE -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20">
+  <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <li class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-5">
+      <span class="w-12 h-12 rounded-full border-2 border-copper/40 text-copper flex items-center justify-center shrink-0"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
+      <span class="text-[15px] font-semibold leading-snug">Licencjonowana doradczyni podatkowa w&nbsp;zespole</span></li>
+    <li class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-5">
+      <span class="w-12 h-12 rounded-full border-2 border-copper/40 text-copper flex items-center justify-center shrink-0"><i class="fa-solid fa-award" aria-hidden="true"></i></span>
+      <span class="text-[15px] font-semibold leading-snug">Certyfikat księgowy Ministra Finansów</span></li>
+    <li class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-5">
+      <span class="w-12 h-12 rounded-full border-2 border-copper/40 text-copper flex items-center justify-center shrink-0"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+      <span class="text-[15px] font-semibold leading-snug">Ubezpieczenie OC do 1&nbsp;000&nbsp;000&nbsp;zł</span></li>
+    <li class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-5">
+      <span class="w-12 h-12 rounded-full border-2 border-copper/40 text-copper flex items-center justify-center shrink-0"><i class="fa-solid fa-lock" aria-hidden="true"></i></span>
+      <span class="text-[15px] font-semibold leading-snug">Szyfrowane archiwum dokumentów</span></li>
+  </ul>
+</section>
+
+<!-- WYCENA -->
+<section class="bg-surface border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-copper font-semibold">Cena</p>
+      <h2 class="mt-3 font-serif text-3xl md:text-[2.6rem] leading-tight">Obsługa spółki z&nbsp;o.o. od 650 zł netto miesięcznie</h2>
+      <p class="mt-5 text-muted">Cena zależy głównie od liczby dokumentów i&nbsp;pracowników. Nie dopłacasz za telefony, maile, odpowiedzi na pisma z&nbsp;urzędu ani za spotkania z&nbsp;opiekunem.</p>
+      <a href="cennik.html" class="mt-7 inline-flex items-center gap-2 text-copper font-semibold">Sprawdź w&nbsp;kalkulatorze<i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
+      <div class="mt-10 rounded-2xl bg-paper border border-line p-5 flex gap-4">
+        <i class="fa-solid fa-phone text-copper mt-1" aria-hidden="true"></i>
+        <p class="text-[15px]">Wolisz porozmawiać? Zadzwoń: <a href="tel:+48750000010" class="font-semibold whitespace-nowrap hover:text-copper">75 000 00 10</a><br><span class="text-muted">poniedziałek–piątek, <span class="whitespace-nowrap">8:00–16:00</span></span></p>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <form id="wycena" class="rounded-3xl bg-surface border border-line shadow-xl shadow-ink/5 p-6 sm:p-8" data-demo-form novalidate>
+  <div data-form-fields>
+    <p class="font-serif text-2xl">Formularz wyceny</p>
+    <p class="mt-1 text-[15px] text-muted">Odpowiadamy w&nbsp;ciągu jednego dnia roboczego.</p>
+    <div class="mt-6 grid sm:grid-cols-2 gap-4">
+      <label class="block"><span class="text-sm font-medium">Imię i&nbsp;nazwisko *</span>
+        <input name="imie" required autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper"></label>
+      <label class="block"><span class="text-sm font-medium">Nazwa firmy</span>
+        <input name="firma" autocomplete="organization" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper"></label>
+      <label class="block"><span class="text-sm font-medium">Telefon *</span>
+        <input name="telefon" type="tel" required autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper"></label>
+      <label class="block"><span class="text-sm font-medium">E-mail</span>
+        <input name="email" type="email" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper"></label>
+      <label class="block"><span class="text-sm font-medium">Forma prawna</span>
+        <select name="forma" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper">
+          <option>Spółka z&nbsp;o.o.</option><option>Spółka komandytowa lub jawna</option><option>Jednoosobowa działalność</option><option>Zakładam firmę</option>
+        </select></label>
+      <label class="block"><span class="text-sm font-medium">Dokumentów miesięcznie</span>
+        <select name="dokumenty" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper">
+          <option>do 30</option><option>31–100</option><option>101–300</option><option>ponad 300</option>
+        </select></label>
+      <label class="block sm:col-span-2"><span class="text-sm font-medium">Kilka słów o&nbsp;firmie</span>
+        <textarea name="wiadomosc" rows="3" class="mt-1.5 w-full rounded-xl border border-line bg-paper/60 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-copper/40 focus:border-copper" placeholder="Branża, liczba pracowników, od kiedy chcesz zmienić biuro"></textarea></label>
+    </div>
+    <p class="mt-3 text-sm text-red-700 hidden" data-form-error role="alert">Uzupełnij imię i&nbsp;nazwisko oraz telefon, żebyśmy mogli oddzwonić.</p>
+    <button type="submit" class="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-copper hover:bg-copperdark text-white px-8 py-4 font-semibold transition">Wyślij zapytanie<i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></button>
+  </div>
+  <div class="hidden text-center py-6" data-form-done role="status" tabindex="-1">
+    <span class="mx-auto w-14 h-14 rounded-full bg-coppersoft text-copper flex items-center justify-center text-2xl"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i></span>
+    <p class="mt-5 font-serif text-2xl">Dziękujemy, to strona przykładowa</p>
+    <p class="mt-3 text-muted max-w-md mx-auto">W&nbsp;wersji dla Państwa firmy ta wiadomość trafi od razu na firmowy adres e-mail, a&nbsp;klient dostanie potwierdzenie, że zapytanie dotarło.</p>
+    <button type="button" class="mt-6 text-copper font-semibold underline underline-offset-4" data-form-reset>Wypełnij jeszcze raz</button>
+  </div>
+</form>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-navy text-white/75 text-[15px]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5">
+      <p class="font-serif text-2xl text-white">Rubryka</p>
+      <p class="mt-1 text-[11px] uppercase tracking-[0.16em] text-white/50">Księgowość i&nbsp;Podatki</p>
+      <p class="mt-5 max-w-sm">Biuro rachunkowe dla spółek i&nbsp;firm z&nbsp;Jeleniej Góry i&nbsp;Karkonoszy. Księgowość, kadry i&nbsp;doradztwo podatkowe w&nbsp;jednym miejscu, od 2012 roku.</p>
+      <p class="mt-6 text-sm text-white/50 leading-relaxed">Rubryka Księgowość i&nbsp;Podatki Sp. z&nbsp;o.o., ul. Złotej Jesieni 14, 58-500 Jelenia Góra<br>
+        Sąd Rejonowy dla Wrocławia-Fabrycznej we Wrocławiu, IX Wydział Gospodarczy KRS<br>
+        KRS 0000000000 · NIP 000-000-00-00 · kapitał zakładowy 50 000 zł</p>
+    </div>
+    <div class="lg:col-span-3">
+      <p class="text-white font-semibold">Usługi</p>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="ksiegowosc-spolek.html" class="hover:text-white">Księgowość spółek</a></li>
+        <li><a href="kadry-i-place.html" class="hover:text-white">Kadry i&nbsp;płace</a></li>
+        <li><a href="doradztwo-podatkowe.html" class="hover:text-white">Doradztwo podatkowe</a></li>
+        <li><a href="oferta.html" class="hover:text-white">Wszystkie usługi</a></li>
+        <li><a href="cennik.html" class="hover:text-white">Cennik i&nbsp;kalkulator</a></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-4">
+      <p class="text-white font-semibold">Kontakt</p>
+      <ul class="mt-4 space-y-2.5">
+        <li><a href="tel:+48750000010" class="text-white text-lg font-semibold tabular-nums whitespace-nowrap hover:text-[#E0A46B]">75 000 00 10</a></li>
+        <li class="[overflow-wrap:anywhere]">biuro@rubryka.example</li>
+        <li>ul. Złotej Jesieni 14, 58-500 Jelenia Góra, II&nbsp;piętro</li>
+        <li>poniedziałek–piątek, <span class="whitespace-nowrap">8:00–16:00</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row gap-2 justify-between text-xs text-white/45">
+      <p>© 2026 Rubryka · Strona przykładowa, wszystkie dane są fikcyjne</p>
+      <p><a href="faq.html" class="hover:text-white">Pytania i&nbsp;odpowiedzi</a> · <a href="kontakt.html" class="hover:text-white">Kontakt</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 inset-x-0 z-30 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-paper/90 backdrop-blur-xl border-t border-line grid grid-cols-2 gap-2">
+  <a href="tel:+48750000010" class="flex items-center justify-center gap-2 rounded-2xl border border-ink/15 bg-surface py-3.5 font-semibold whitespace-nowrap"><i class="fa-solid fa-phone text-copper" aria-hidden="true"></i>Zadzwoń</a>
+  <a href="kontakt.html#wycena" class="flex items-center justify-center gap-2 rounded-2xl bg-copper text-white py-3.5 font-semibold whitespace-nowrap">Bezpłatna wycena</a>
+</div>
+<div class="md:hidden h-20" aria-hidden="true"></div>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

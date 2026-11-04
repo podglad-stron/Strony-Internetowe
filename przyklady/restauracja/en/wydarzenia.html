@@ -1,0 +1,296 @@
+<!doctype html>
+<!-- Plik wygenerowany z przyklady/_zrodla/restauracja/strony/wydarzenia.html. Zmieniaj szablon i uruchom: py -m src.przyklady -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Events – Gospoda Trzy Doliny</title>
+<meta name="description" content="Live music, a seasonal wild mushroom menu and tastings of local craft beer.">
+<link rel="alternate" hreflang="pl" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/wydarzenia.html">
+<link rel="alternate" hreflang="de" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/de/wydarzenia.html">
+<link rel="alternate" hreflang="en" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/en/wydarzenia.html">
+<link rel="alternate" hreflang="x-default" href="https://podglad-stron.github.io/Strony-Internetowe/przyklady/restauracja/wydarzenia.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237C1D24'/%3E%3Cpath d='M10 46 L24 24 L32 36 L40 22 L54 46 Z' fill='%23FAF7F2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { bg: "#FAF7F2", surface: "#FFFFFF", ink: "#241A15", muted: "#6B5E55", line: "#E7DFD5",
+              wine: "#7C1D24", winedark: "#5F151B", amber: "#C05621", oak: "#2D1F18", moss: "#384B34", sand: "#F1E9DD" },
+    fontFamily: { display: ["Fraunces", "Georgia", "serif"], sans: ["Work Sans", "system-ui", "sans-serif"] }
+  } } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { padding-top: 28px; overflow-x: hidden; }
+  section[id], div[id].kotwica { scroll-margin-top: 7.5rem; }
+  [data-menu] section[id] { scroll-margin-top: 10.5rem; }
+  h1, h2, h3 { overflow-wrap: break-word; }
+  html[lang="de"] h1, html[lang="de"] h2, html[lang="de"] h3 { -webkit-hyphens: auto; hyphens: auto; }
+  .modal[hidden], [data-panel][hidden] { display: none; }
+  .dd-panel { display: none; }
+  .dd:hover .dd-panel, .dd:focus-within .dd-panel { display: block; }
+  nav a[aria-current="page"] { color: #7C1D24; }
+  .lang a[aria-current="true"] { background: #7C1D24; color: #fff; }
+  .menu-row { display: flex; align-items: baseline; gap: .75rem; }
+  .menu-row .dots { flex: 1; border-bottom: 1px dotted #CDBFAE; transform: translateY(-5px); min-width: .75rem; }
+  tr.dzis td { color: #7C1D24; }
+  tr.dzis .dzis-znak { display: inline-block; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+
+</head>
+<body class="bg-bg text-ink font-sans antialiased text-[17px] leading-relaxed">
+<div class="fixed top-0 inset-x-0 z-50 h-7 bg-slate-900/90 backdrop-blur-md border-b border-white/10 text-white text-xs leading-7 px-3 sm:px-4 flex items-center justify-between gap-3" lang="pl">
+  <span class="truncate"><i class="fa-solid fa-circle-info mr-1.5 text-white/70" aria-hidden="true"></i><span class="sm:hidden">Przykład · pakiet Restauracja</span><span class="hidden sm:inline">Przykładowa realizacja · pakiet Restauracja / kilka lokali · dane fikcyjne</span></span>
+  <button type="button" data-modal-open="modal-pakiet" class="shrink-0 font-semibold underline underline-offset-2 hover:text-amber-300"><span class="sm:hidden">Co zawiera?</span><span class="hidden sm:inline">Co zawiera ten pakiet?</span></button>
+</div>
+
+<div id="modal-pakiet" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-pakiet-tytul" lang="pl" hidden>
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-xl max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-9">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-bg text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <p class="text-xs uppercase tracking-[0.2em] text-wine font-bold">Strona przykładowa</p>
+    <h2 id="modal-pakiet-tytul" class="mt-2 font-display text-3xl font-semibold">Pakiet Restauracja / kilka lokali</h2>
+    <p class="mt-3 text-muted">Dla restauracji albo sieci lokali, która chce przyciągać turystów i gości z okolicy, a menu i godziny zmieniać sama, bez dzwonienia do informatyka.</p>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Menu, które zmieniają Państwo sami w Arkuszu Google: nowa cena widoczna na stronie po odświeżeniu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wersje niemiecka i angielska, każda pod własnym adresem, żeby Google pokazywał je turystom</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Osobna podstrona każdego lokalu: adres, mapa, telefon i godziny z zaznaczonym dzisiejszym dniem</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Rezerwacja stolika na maila lokalu albo przycisk do systemu rezerwacji, z którego Państwo już korzystają</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wydarzenia i sezonowe menu, wizytówka w Mapach Google dla każdego lokalu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-wine mt-1.5" aria-hidden="true"></i><span>Wszystko z pakietu Firma: teksty, domena, firmowa poczta, statystyki i poprawki przed startem</span></li>
+    </ul>
+    <div class="mt-7 rounded-2xl bg-sand p-5">
+      <p class="font-display text-2xl font-semibold">5 900–7 900 zł <span class="font-sans text-base font-normal text-muted">jednorazowo</span></p>
+      <p class="text-[15px] text-ink/80">cena zależy od liczby lokali i języków</p>
+      <p class="mt-3 font-display text-xl font-semibold">+ 199 zł <span class="font-sans text-base font-normal text-muted">miesięcznie opieki</span></p>
+      <p class="text-[15px] text-ink/80">hosting, kopie zapasowe, aktualizacje i zmiany treści</p>
+    </div>
+    <p class="mt-5 text-[15px] text-ink/80"><i class="fa-solid fa-hand-pointer text-wine mr-2" aria-hidden="true"></i>Wypróbuj na tej stronie: przełącz język w nagłówku (PL / DE / EN) i otwórz rezerwację stolika.</p>
+    <p class="mt-4 text-sm text-muted">Restauracja, adresy, telefony, menu i opinie są wymyślone. Strona pokazuje, jak może wyglądać serwis Państwa restauracji.</p>
+  </div>
+</div>
+
+<div id="baner-jezyka" class="hidden bg-moss text-white text-sm" data-baner-jezyka>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
+    <p><i class="fa-solid fa-language mr-2" aria-hidden="true"></i><span data-baner-tekst></span> <a href="#" class="font-semibold underline underline-offset-2" data-baner-link></a></p>
+    <button type="button" class="w-8 h-8 rounded-full hover:bg-white/10 shrink-0" data-baner-zamknij aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  </div>
+</div>
+<header class="sticky top-7 z-40 bg-bg/90 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[4.5rem] flex items-center justify-between gap-3">
+    <a href="index.html" class="flex items-center gap-3 min-w-0" aria-label="Gospoda Trzy Doliny – home page">
+      <span aria-hidden="true" class="w-10 h-10 rounded-xl bg-wine text-bg flex items-center justify-center shrink-0">
+        <svg viewBox="0 0 64 64" class="w-7 h-7" fill="currentColor"><path d="M6 48 L22 22 L32 36 L42 18 L58 48 Z"/></svg>
+      </span>
+      <span class="min-w-0 leading-tight">
+        <span class="block font-display text-xl font-semibold truncate">Trzy Doliny</span>
+        <span class="block text-[11px] uppercase tracking-[0.16em] text-muted truncate">Sudeten cooking</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium" aria-label="Menu">
+      <a href="index.html" class="hover:text-wine transition">Home</a>
+      <a href="menu.html" class="hover:text-wine transition">Menu</a>
+      <div class="dd relative">
+        <button type="button" class="inline-flex items-center gap-1.5 py-6 hover:text-wine transition">Locations<i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i></button>
+        <div class="dd-panel absolute left-1/2 -translate-x-1/2 top-full w-72 rounded-2xl bg-surface border border-line shadow-xl shadow-ink/10 p-2">
+          <a href="lokal-jelenia-gora.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Old Town</span><span class="block text-sm text-muted font-normal">Jelenia Góra</span></a>
+          <a href="lokal-cieplice.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Cieplice Spa</span><span class="block text-sm text-muted font-normal">Jelenia Góra-Cieplice</span></a>
+          <a href="lokal-karpacz.html" class="block rounded-xl px-4 py-3 hover:bg-bg"><span class="block font-semibold">Karpacz</span><span class="block text-sm text-muted font-normal">Karpacz</span></a>
+        </div>
+      </div>
+      <a href="wydarzenia.html" class="hover:text-wine transition" aria-current="page">Events</a>
+    </nav>
+    <div class="flex items-center gap-2 shrink-0">
+      <div class="lang hidden sm:flex items-center rounded-full border border-line bg-surface p-0.5 text-xs font-semibold" role="group" aria-label="Choose language">
+        <a href="../wydarzenia.html" hreflang="pl" lang="pl" data-lang="pl" class="px-2.5 py-1.5 rounded-full">PL</a>
+        <a href="../de/wydarzenia.html" hreflang="de" lang="de" data-lang="de" class="px-2.5 py-1.5 rounded-full">DE</a>
+        <a href="../en/wydarzenia.html" hreflang="en" lang="en" data-lang="en" aria-current="true" class="px-2.5 py-1.5 rounded-full">EN</a>
+      </div>
+      <button type="button" data-rez-open class="hidden md:inline-flex items-center rounded-full bg-wine hover:bg-winedark text-white px-5 py-2.5 text-[15px] font-semibold whitespace-nowrap transition">Book a table</button>
+      
+      <button type="button" class="lg:hidden w-11 h-11 rounded-full border border-line bg-surface flex items-center justify-center" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Open navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div id="menu-mobile" class="lg:hidden border-t border-line bg-bg max-h-[calc(100vh-7rem)] overflow-y-auto" data-panel hidden>
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 grid gap-1 text-lg font-medium" aria-label="Menu">
+      <a href="index.html" class="py-2.5">Home</a>
+      <a href="menu.html" class="py-2.5">Menu</a>
+      <p class="pt-3 pb-1 text-xs uppercase tracking-[0.16em] text-muted">Locations</p>
+      <a href="lokal-jelenia-gora.html" class="py-2 pl-4 text-base">Old Town <span class="text-muted">· Jelenia Góra</span></a>
+      <a href="lokal-cieplice.html" class="py-2 pl-4 text-base">Cieplice Spa</a>
+      <a href="lokal-karpacz.html" class="py-2 pl-4 text-base">Karpacz</a>
+      <a href="wydarzenia.html" class="py-2.5" aria-current="page">Events</a>
+      <a href="rezerwacja.html" class="py-2.5">Booking</a>
+      <div class="lang mt-3 flex items-center gap-1 rounded-full border border-line bg-surface p-1 self-start text-sm font-semibold" role="group" aria-label="Choose language">
+        <a href="../wydarzenia.html" hreflang="pl" lang="pl" data-lang="pl" class="px-4 py-2 rounded-full">Polski</a>
+        <a href="../de/wydarzenia.html" hreflang="de" lang="de" data-lang="de" class="px-4 py-2 rounded-full">Deutsch</a>
+        <a href="../en/wydarzenia.html" hreflang="en" lang="en" data-lang="en" aria-current="true" class="px-4 py-2 rounded-full">English</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+<section class="border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-12 md:pt-16 md:pb-16">
+    <p class="text-xs uppercase tracking-[0.24em] text-wine font-semibold">Events</p>
+    <h1 class="mt-3 font-display font-semibold text-[2.5rem] sm:text-5xl md:text-6xl leading-tight max-w-3xl">Events and seasonal menus</h1>
+    <p class="mt-5 text-lg text-ink/80 max-w-2xl">Every week there's something on at one of our restaurants. For events it's worth booking a table early.</p>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20 grid md:grid-cols-2 gap-6">
+  <article class="rounded-3xl overflow-hidden bg-surface border border-line flex flex-col">
+    <div class="aspect-[16/9] overflow-hidden"><img src="../img/muzyka.webp" alt="Acoustic guitar being played" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="p-7 flex-1 flex flex-col">
+      <p class="text-sm font-semibold text-moss"><i class="fa-regular fa-calendar mr-1.5" aria-hidden="true"></i>Every Friday, 7 pm · Cieplice Spa</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold">Live music</h2>
+      <p class="mt-3 text-muted flex-1">Acoustic sets on the terrace, and in winter in the room by the window. Free entry, just book a table.</p>
+      <button type="button" data-rez-open data-rez-lokal-wybor="cieplice" class="mt-6 self-start inline-flex items-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-6 py-3 font-semibold transition whitespace-nowrap">Book a table</button>
+    </div>
+  </article>
+  <article class="rounded-3xl overflow-hidden bg-surface border border-line flex flex-col">
+    <div class="aspect-[16/9] overflow-hidden"><img src="../img/borowiki.webp" alt="Porcini mushrooms on a wooden board" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="p-7 flex-1 flex flex-col">
+      <p class="text-sm font-semibold text-moss"><i class="fa-regular fa-calendar mr-1.5" aria-hidden="true"></i>September and October · All restaurants</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold">Porcini week</h2>
+      <p class="mt-3 text-muted flex-1">A seasonal menu of forest mushrooms: porcini soup, pierogi with saffron milk caps and pork tenderloin in chanterelle sauce.</p>
+      <a href="menu.html" class="mt-6 self-start inline-flex items-center gap-2 rounded-full border border-ink/15 px-6 py-3 font-semibold hover:border-wine hover:text-wine transition whitespace-nowrap">See the menu</a>
+    </div>
+  </article>
+  <article class="rounded-3xl overflow-hidden bg-surface border border-line flex flex-col">
+    <div class="aspect-[16/9] overflow-hidden"><img src="../img/degustacja.webp" alt="Craft beers in glasses" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="p-7 flex-1 flex flex-col">
+      <p class="text-sm font-semibold text-moss"><i class="fa-regular fa-calendar mr-1.5" aria-hidden="true"></i>First Saturday of the month, 6 pm · Karpacz</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold">Craft beer tasting</h2>
+      <p class="mt-3 text-muted flex-1">Five beers from local breweries, with the brewer telling the story of each. Plus small plates from our kitchen.</p>
+      <button type="button" data-rez-open data-rez-lokal-wybor="karpacz" class="mt-6 self-start inline-flex items-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-6 py-3 font-semibold transition whitespace-nowrap">Book a table</button>
+    </div>
+  </article>
+  <article class="rounded-3xl overflow-hidden bg-surface border border-line flex flex-col">
+    <div class="aspect-[16/9] overflow-hidden"><img src="../img/kominek.webp" alt="Fireplace" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="p-7 flex-1 flex flex-col">
+      <p class="text-sm font-semibold text-moss"><i class="fa-regular fa-calendar mr-1.5" aria-hidden="true"></i>December to March, daily from 5 pm · Karpacz</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold">Fireside evenings</h2>
+      <p class="mt-3 text-muted flex-1">Mulled wine, apple fritters and a seat by the fire after a day on the slopes.</p>
+      <button type="button" data-rez-open data-rez-lokal-wybor="karpacz" class="mt-6 self-start inline-flex items-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-6 py-3 font-semibold transition whitespace-nowrap">Book a table</button>
+    </div>
+  </article>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20 md:pb-28">
+  <div class="rounded-[2rem] bg-oak text-bg grid md:grid-cols-12 overflow-hidden">
+    <div class="md:col-span-5 aspect-[16/10] md:aspect-auto"><img src="../img/lokal-jelenia-gora.webp" alt="Dining room with wood panelling and tables" class="w-full h-full object-cover" loading="lazy"></div>
+    <div class="md:col-span-7 p-8 sm:p-12 flex flex-col justify-center">
+      <h2 class="font-display font-semibold text-3xl md:text-4xl leading-tight">Parties and company dinners</h2>
+      <p class="mt-4 text-bg/80">Birthdays, christenings and company events for up to 30 guests in our Old Town room. We take care of the menu and decorations, you take care of your guests.</p>
+      <a href="tel:+48750000021" class="mt-8 self-start inline-flex items-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-7 py-4 font-semibold transition whitespace-nowrap"><i class="fa-solid fa-phone text-sm" aria-hidden="true"></i>Ask about dates: 75 000 00 21</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-oak text-bg/75 text-[15px]">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <p class="font-display text-2xl font-semibold text-bg">Trzy Doliny</p>
+      <p class="mt-1 text-[11px] uppercase tracking-[0.16em] text-bg/50">Gospoda · Sudeten cooking</p>
+      <p class="mt-5">Sudeten cooking in Jelenia Góra, Cieplice and Karpacz. We cook with produce from local farmers, cheesemakers and fish farms.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-jelenia-gora.html" class="hover:underline">Old Town</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Jelenia Góra</p>
+      <p class="mt-3">ul. Kamienicza 5, 58-500 Jelenia Góra</p>
+      <a href="tel:+48750000021" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 21</a>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-cieplice.html" class="hover:underline">Cieplice Spa</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Jelenia Góra-Cieplice</p>
+      <p class="mt-3">ul. Zdrojowa Polana 4, 58-560 Jelenia Góra-Cieplice</p>
+      <a href="tel:+48750000022" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 22</a>
+    </div>
+    <div>
+      <p class="font-semibold text-bg"><a href="lokal-karpacz.html" class="hover:underline">Karpacz</a></p>
+      <p class="mt-1 text-bg/55 text-sm">Karpacz</p>
+      <p class="mt-3">ul. Pod Śnieżnymi Kotłami 21, 58-540 Karpacz</p>
+      <a href="tel:+48750000023" class="mt-2 inline-block font-semibold text-bg tabular-nums whitespace-nowrap hover:underline">75 000 00 23</a>
+    </div>
+  </div>
+  <div class="border-t border-bg/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row gap-3 sm:items-center justify-between text-xs text-bg/50">
+      <p>© 2026 Gospoda Trzy Doliny · Sample website, all details are fictional · <span class="[overflow-wrap:anywhere]">rezerwacje@trzydoliny.example</span></p>
+      <p class="lang flex gap-1"><a href="../wydarzenia.html" hreflang="pl" lang="pl" data-lang="pl" class="px-2 py-1 rounded-full hover:text-bg">Polski</a><a href="../de/wydarzenia.html" hreflang="de" lang="de" data-lang="de" class="px-2 py-1 rounded-full hover:text-bg">Deutsch</a><a href="../en/wydarzenia.html" hreflang="en" lang="en" data-lang="en" aria-current="true" class="px-2 py-1 rounded-full hover:text-bg">English</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="md:hidden fixed bottom-0 inset-x-0 z-30 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-bg/90 backdrop-blur-xl border-t border-line grid grid-cols-2 gap-2">
+  <a href="menu.html" class="flex items-center justify-center gap-2 rounded-2xl border border-ink/15 bg-surface py-3.5 font-semibold whitespace-nowrap"><i class="fa-solid fa-utensils text-wine" aria-hidden="true"></i>Menu</a>
+  <button type="button" data-rez-open class="flex items-center justify-center gap-2 rounded-2xl bg-wine text-white py-3.5 font-semibold whitespace-nowrap"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i>Booking</button>
+  
+</div>
+<div class="md:hidden h-20" aria-hidden="true"></div>
+
+<div id="modal-rezerwacja" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-rez-tytul" hidden>
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-lg max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-8">
+    <button type="button" data-modal-close data-autofocus class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-bg text-muted" aria-label="Close"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <h2 id="modal-rez-tytul" class="font-display text-3xl font-semibold pr-10">Table booking</h2>
+    <p class="mt-2 text-muted text-[15px]">We'll confirm your booking by text message or phone.</p>
+    <div class="mt-6"><form class="block" data-demo-form novalidate>
+  <div data-form-fields>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Restaurant</span>
+        <select name="lokal" data-rez-lokal class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option value="jg">Old Town · Jelenia Góra</option>
+          <option value="cieplice">Cieplice Spa</option>
+          <option value="karpacz">Karpacz</option>
+        </select></label>
+      <label class="block"><span class="text-sm font-semibold">Date *</span>
+        <input type="date" name="data" required data-rez-data class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block"><span class="text-sm font-semibold">Time *</span>
+        <select name="godzina" required class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option>
+          <option>15:00</option><option>15:30</option><option>16:00</option><option>16:30</option><option>17:00</option><option>17:30</option>
+          <option selected>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+        </select></label>
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Guests</span>
+        <select name="osoby" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+        </select>
+        <span class="mt-1 block text-xs text-muted">more than 12: please call</span></label>
+      <label class="block"><span class="text-sm font-semibold">Name *</span>
+        <input name="imie" required autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block"><span class="text-sm font-semibold">Phone *</span>
+        <input name="telefon" type="tel" required autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></label>
+      <label class="block sm:col-span-2"><span class="text-sm font-semibold">Notes</span>
+        <textarea name="uwagi" rows="2" placeholder="E.g. high chair, table by the fireplace, allergies" class="mt-1.5 w-full rounded-xl border border-line bg-bg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-wine/30 focus:border-wine"></textarea></label>
+    </div>
+    <p class="mt-3 text-sm text-red-700 hidden" data-form-error role="alert">Please choose a date and time and enter your name and phone number.</p>
+    <button type="submit" class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-wine hover:bg-winedark text-white px-8 py-4 font-semibold transition">Confirm booking</button>
+  </div>
+  <div class="hidden text-center py-4" data-form-done role="status" tabindex="-1">
+    <span class="mx-auto w-14 h-14 rounded-full bg-sand text-wine flex items-center justify-center text-2xl"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span>
+    <p class="mt-5 font-display text-2xl font-semibold">This is a sample website</p>
+    <p class="mt-3 text-muted max-w-md mx-auto">On the real website this booking goes straight to the restaurant's email or into the booking system the restaurant already uses.</p>
+    <button type="button" class="mt-6 text-wine font-semibold underline underline-offset-4" data-form-reset>New booking</button>
+  </div>
+</form>
+</div>
+  </div>
+</div>
+
+<script src="../js/site.js"></script>
+
+</body>
+</html>

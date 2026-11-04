@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fizjoterapeutka Jelenia Góra – Marta Halicka, terapia manualna i&nbsp;rehabilitacja</title>
+<meta name="description" content="Fizjoterapia w Jeleniej Górze: terapia manualna, rehabilitacja po kontuzjach i operacjach, ból kręgosłupa. Wizyty 50 minut, jeden na jeden. Strona przykładowa z fikcyjnymi danymi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E6E77'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='white' text-anchor='middle'%3EMH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { bg: "#F7FAF8", surface: "#FFFFFF", ink: "#1A2421", muted: "#55625E", line: "#E2E8E5",
+              teal: "#0E6E77", tealdark: "#0A5359", tealsoft: "#E3F0EF", sand: "#D4A373", sandsoft: "#F5ECE1" },
+    fontFamily: { display: ["Manrope", "sans-serif"], body: ["Inter", "sans-serif"] }
+  } } };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { padding-top: 28px; overflow-x: hidden; }
+  section[id] { scroll-margin-top: 7rem; }
+  .price-row { display: flex; align-items: baseline; gap: .75rem; }
+  .price-row .dots { flex: 1; border-bottom: 1px dotted #B9C4C0; transform: translateY(-4px); min-width: 1rem; }
+  .modal { transition: opacity .2s ease; }
+  .modal[hidden] { display: none; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body class="bg-bg text-ink font-body antialiased text-[17px] leading-relaxed">
+
+<!-- PASEK STRONY PRZYKŁADOWEJ -->
+<div class="fixed top-0 inset-x-0 z-50 h-7 bg-slate-900/90 backdrop-blur-md border-b border-white/10 text-white text-xs leading-7 px-3 sm:px-4 flex items-center justify-between gap-3">
+  <span class="truncate"><i class="fa-solid fa-circle-info mr-1.5 text-white/70" aria-hidden="true"></i><span class="sm:hidden">Przykład · pakiet Wizytówka</span><span class="hidden sm:inline">Przykładowa realizacja · pakiet Wizytówka · dane fikcyjne</span></span>
+  <button type="button" data-modal-open="modal-pakiet" class="shrink-0 font-semibold underline underline-offset-2 hover:text-sand"><span class="sm:hidden">Co zawiera?</span><span class="hidden sm:inline">Co zawiera ten pakiet?</span></button>
+</div>
+
+<!-- NAGŁÓWEK -->
+<header class="sticky top-7 z-30 bg-bg/85 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[4.25rem] flex items-center justify-between gap-4">
+    <a href="#" class="flex items-center gap-3 min-w-0" aria-label="Fizjoterapia Marta Halicka – początek strony">
+      <span aria-hidden="true" class="w-10 h-10 rounded-xl bg-teal text-white font-display font-extrabold flex items-center justify-center shrink-0">MH</span>
+      <span class="min-w-0 leading-tight">
+        <span class="block font-display font-bold text-lg truncate">Marta Halicka</span>
+        <span class="block text-xs text-muted truncate">Fizjoterapia · Jelenia Góra</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium" aria-label="Menu">
+      <a href="#o-mnie" class="hover:text-teal transition">O&nbsp;mnie</a>
+      <a href="#pomoc" class="hover:text-teal transition">W&nbsp;czym pomagam</a>
+      <a href="#cennik" class="hover:text-teal transition">Cennik</a>
+      <a href="#wizyta" class="hover:text-teal transition">Pierwsza wizyta</a>
+      <a href="#kontakt" class="hover:text-teal transition">Kontakt</a>
+    </nav>
+    <a href="tel:+48750000001" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-teal hover:bg-tealdark text-white px-5 py-2.5 text-[15px] font-semibold transition shrink-0 whitespace-nowrap">
+      <i class="fa-solid fa-phone text-sm" aria-hidden="true"></i>75 000 00 01
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="relative overflow-hidden">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-40 -left-32 w-[30rem] h-[30rem] rounded-full bg-tealsoft blur-3xl"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 md:pt-16 md:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+    <div class="lg:col-span-6">
+      <p class="inline-flex items-center gap-2 rounded-full bg-surface border border-line px-4 py-1.5 text-sm font-semibold text-teal">
+        <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>Wizyty umawiane telefonicznie
+      </p>
+      <h1 class="mt-6 font-display font-extrabold tracking-tight text-[2.65rem] leading-[1.04] sm:text-6xl">
+        Wróć do ruchu<br><span class="text-teal">bez bólu.</span>
+      </h1>
+      <p class="mt-5 text-lg sm:text-xl text-ink/85">
+        <strong class="font-semibold text-ink">mgr Marta Halicka</strong>, fizjoterapeutka. Terapia manualna,
+        rehabilitacja po kontuzjach w&nbsp;górach i&nbsp;po operacjach, ból kręgosłupa.
+      </p>
+      <p class="mt-4 max-w-xl text-muted">Gabinet w&nbsp;Jeleniej Górze. Każda wizyta to 50 minut pracy jeden na jeden, bez pośpiechu i&nbsp;bez kolejki.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="tel:+48750000001" class="inline-flex items-center justify-center gap-3 rounded-full bg-teal hover:bg-tealdark text-white px-6 py-4 text-[17px] font-semibold whitespace-nowrap shadow-lg shadow-teal/25 transition hover:-translate-y-0.5">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>Zadzwoń i&nbsp;umów termin
+        </a>
+        <a href="#pomoc" class="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-surface px-6 py-4 text-[17px] font-medium whitespace-nowrap transition hover:border-teal hover:text-teal">
+          Sprawdź zakres pomocy
+        </a>
+      </div>
+      <ul class="mt-9 grid grid-cols-2 gap-x-6 gap-y-3 text-[15px] text-ink/85 max-w-md">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-award text-teal w-4" aria-hidden="true"></i>10 lat praktyki</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-star text-sand w-4" aria-hidden="true"></i>4,9 · 86 opinii</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-hourglass-half text-teal w-4" aria-hidden="true"></i>50 minut, 1:1</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-file-circle-xmark text-teal w-4" aria-hidden="true"></i>Bez skierowania</li>
+      </ul>
+    </div>
+    <div class="lg:col-span-6">
+      <div class="relative">
+        <div class="rounded-[2rem] overflow-hidden border border-line shadow-2xl shadow-teal/10 aspect-[4/3] lg:aspect-[5/6]">
+          <img src="img/hero.webp" alt="Fizjoterapeutka rozluźnia mięśnie karku i barków pacjentki" class="w-full h-full object-cover" fetchpriority="high">
+        </div>
+        <div class="absolute -bottom-6 left-4 sm:-left-6 right-4 sm:right-auto rounded-2xl bg-surface border border-line shadow-xl shadow-ink/10 px-5 py-4 flex items-center gap-4">
+          <span class="w-11 h-11 rounded-full bg-tealsoft text-teal flex items-center justify-center shrink-0"><i class="fa-regular fa-clock" aria-hidden="true"></i></span>
+          <span class="leading-tight"><span class="block text-xs uppercase tracking-wider text-muted">Godziny przyjęć</span>
+            <span class="block font-display font-bold">pn–pt 8:00–19:00</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O MNIE -->
+<section id="o-mnie" class="bg-surface border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-12 gap-12 items-start">
+    <div class="lg:col-span-5">
+      <div class="rounded-[2rem] overflow-hidden aspect-[4/5] max-h-[34rem] border border-line">
+        <img src="img/terapia.webp" alt="Terapia manualna odcinka piersiowego kręgosłupa" class="w-full h-full object-cover object-[50%_40%]" loading="lazy">
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <p class="text-xs uppercase tracking-[0.25em] text-teal font-bold">O&nbsp;mnie</p>
+      <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Szukam przyczyny, a&nbsp;nie tylko miejsca, które boli</h2>
+      <div class="mt-6 space-y-4 text-lg text-ink/85 max-w-2xl">
+        <p>Jestem fizjoterapeutką od 10 lat. Pracuję z&nbsp;osobami po urazach, po operacjach i&nbsp;z&nbsp;tymi, które od miesięcy budzą się z&nbsp;bólem karku albo pleców.</p>
+        <p>Ból kolana często zaczyna się w&nbsp;biodrze, a&nbsp;ból karku w&nbsp;sposobie, w&nbsp;jaki siedzimy przy biurku. Dlatego na pierwszej wizycie sprawdzam, jak porusza się całe ciało, a&nbsp;dopiero potem zaczynam terapię.</p>
+        <p>Sama biegam po karkonoskich szlakach, więc dobrze rozumiem, jak bardzo chce się wrócić na trasę po kontuzji.</p>
+      </div>
+      <ul class="mt-10 grid sm:grid-cols-3 gap-4">
+        <li class="rounded-2xl border border-line bg-bg p-5">
+          <i class="fa-solid fa-hands text-teal text-xl" aria-hidden="true"></i>
+          <p class="mt-3 font-display font-bold leading-snug">Terapia manualna</p>
+          <p class="mt-1 text-sm text-muted">Kurs zaawansowany, praca z&nbsp;kręgosłupem i&nbsp;stawami</p>
+        </li>
+        <li class="rounded-2xl border border-line bg-bg p-5">
+          <i class="fa-solid fa-person-running text-teal text-xl" aria-hidden="true"></i>
+          <p class="mt-3 font-display font-bold leading-snug">Fizjoterapia sportowa</p>
+          <p class="mt-1 text-sm text-muted">Biegacze, narciarze, wspinacze i&nbsp;rowerzyści</p>
+        </li>
+        <li class="rounded-2xl border border-line bg-bg p-5">
+          <i class="fa-solid fa-id-card text-teal text-xl" aria-hidden="true"></i>
+          <p class="mt-3 font-display font-bold leading-snug">mgr fizjoterapii</p>
+          <p class="mt-1 text-sm text-muted">Prawo wykonywania zawodu nr 000000</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- W CZYM POMAGAM -->
+<section id="pomoc" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+  <div class="max-w-2xl">
+    <p class="text-xs uppercase tracking-[0.25em] text-teal font-bold">W&nbsp;czym pomagam</p>
+    <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Kiedy warto się zgłosić</h2>
+    <p class="mt-5 text-lg text-muted">Na wizytę nie potrzeba skierowania. Jeśli nie wiesz, czy to problem dla fizjoterapeuty, zadzwoń. Powiem szczerze, czy mogę pomóc.</p>
+  </div>
+  <div class="mt-12 grid md:grid-cols-2 gap-5">
+    <article class="rounded-3xl bg-surface border border-line p-6 sm:p-8">
+      <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center text-xl"><i class="fa-solid fa-person-praying" aria-hidden="true"></i></span>
+      <h3 class="mt-5 font-display font-bold text-2xl">Ból kręgosłupa i&nbsp;karku</h3>
+      <p class="mt-2 text-muted">Ból w&nbsp;dolnej części pleców, sztywny kark, drętwienie rąk, bóle głowy związane z&nbsp;napięciem mięśni.</p>
+    </article>
+    <article class="rounded-3xl bg-surface border border-line p-6 sm:p-8">
+      <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center text-xl"><i class="fa-solid fa-laptop" aria-hidden="true"></i></span>
+      <h3 class="mt-5 font-display font-bold text-2xl">Przeciążenia od pracy siedzącej</h3>
+      <p class="mt-2 text-muted">Barki, które bolą pod koniec dnia, napięte biodra i&nbsp;plecy po ośmiu godzinach przy komputerze.</p>
+    </article>
+    <article class="rounded-3xl bg-surface border border-line p-6 sm:p-8">
+      <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center text-xl"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
+      <h3 class="mt-5 font-display font-bold text-2xl">Rehabilitacja po operacjach</h3>
+      <p class="mt-2 text-muted">Po rekonstrukcji więzadła krzyżowego, artroskopii, złamaniach i&nbsp;wymianie stawu. Plan powrotu do sprawności krok po kroku.</p>
+    </article>
+    <article class="rounded-3xl bg-surface border border-line p-6 sm:p-8">
+      <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center text-xl"><i class="fa-solid fa-bandage" aria-hidden="true"></i></span>
+      <h3 class="mt-5 font-display font-bold text-2xl">Kontuzje sportowe</h3>
+      <p class="mt-2 text-muted">Skręcony staw skokowy, ból kolana biegacza, naderwane mięśnie, przeciążone ścięgna.</p>
+    </article>
+  </div>
+  <div class="mt-5 rounded-3xl overflow-hidden bg-ink text-white grid md:grid-cols-2">
+    <div class="aspect-[16/10] md:aspect-auto md:min-h-[22rem]">
+      <img src="img/gory.webp" alt="Buty do biegania w terenie na skalistym szlaku w górach" class="w-full h-full object-cover" loading="lazy">
+    </div>
+    <div class="p-7 sm:p-10 flex flex-col justify-center">
+      <p class="text-xs uppercase tracking-[0.25em] text-sand font-bold">Dla aktywnych w&nbsp;Karkonoszach</p>
+      <h3 class="mt-3 font-display font-extrabold text-3xl leading-tight">Kontuzja na szlaku? Zacznijmy od diagnozy, a&nbsp;nie od przerwy na pół roku</h3>
+      <p class="mt-4 text-white/80">Pracuję z&nbsp;biegaczami górskimi, narciarzami i&nbsp;turystami. Wspólnie ustalamy, co można robić już teraz, żeby szybciej i&nbsp;bezpiecznie wrócić na trasę.</p>
+      <a href="tel:+48750000001" class="mt-7 self-start inline-flex items-center gap-2 rounded-full bg-sand hover:bg-[#c8935f] text-ink px-6 py-3 font-semibold transition whitespace-nowrap">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>Zadzwoń: 75 000 00 01
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CENNIK -->
+<section id="cennik" class="bg-surface border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-4">
+      <p class="text-xs uppercase tracking-[0.25em] text-teal font-bold">Cennik</p>
+      <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Ceny bez niespodzianek</h2>
+      <p class="mt-5 text-lg text-muted">Płacisz za wizytę, nie za pakiet. Płatność gotówką, kartą albo <span class="whitespace-nowrap">BLIK-iem</span>.</p>
+    </div>
+    <div class="lg:col-span-8">
+      <ul class="rounded-3xl border border-line bg-bg p-6 sm:p-9 space-y-6">
+        <li>
+          <div class="price-row text-lg"><span class="font-semibold">Terapia manualna i&nbsp;osteopatyczna</span><span class="dots"></span><span class="font-display font-bold tabular-nums whitespace-nowrap">160 zł</span></div>
+          <p class="mt-1 text-[15px] text-muted">50 minut · kręgosłup, stawy, napięcia mięśniowe</p>
+        </li>
+        <li>
+          <div class="price-row text-lg"><span class="font-semibold">Rehabilitacja pourazowa i&nbsp;pooperacyjna</span><span class="dots"></span><span class="font-display font-bold tabular-nums whitespace-nowrap">150 zł</span></div>
+          <p class="mt-1 text-[15px] text-muted">50 minut · terapia i&nbsp;ćwiczenia według etapu leczenia</p>
+        </li>
+        <li>
+          <div class="price-row text-lg"><span class="font-semibold">Masaż leczniczy tkanek głębokich</span><span class="dots"></span><span class="font-display font-bold tabular-nums whitespace-nowrap">140 zł</span></div>
+          <p class="mt-1 text-[15px] text-muted">50 minut · rozluźnienie przeciążonych mięśni</p>
+        </li>
+        <li>
+          <div class="price-row text-lg"><span class="font-semibold">Kinesiotaping</span><span class="dots"></span><span class="font-display font-bold tabular-nums whitespace-nowrap">40 / 60 zł</span></div>
+          <p class="mt-1 text-[15px] text-muted">40 zł jako dodatek do wizyty, 60 zł jako osobna wizyta</p>
+        </li>
+      </ul>
+      <p class="mt-5 text-[15px] text-muted flex gap-2"><i class="fa-regular fa-calendar-xmark text-teal mt-1" aria-hidden="true"></i>Termin można bezpłatnie przełożyć lub odwołać do 24 godzin przed wizytą.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PIERWSZA WIZYTA -->
+<section id="wizyta" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+  <div class="grid lg:grid-cols-12 gap-12 items-end">
+    <div class="lg:col-span-7">
+      <p class="text-xs uppercase tracking-[0.25em] text-teal font-bold">Pierwsza wizyta</p>
+      <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Jak wygląda pierwsze spotkanie</h2>
+    </div>
+    <p class="lg:col-span-5 text-lg text-muted">Zabierz wygodny strój i&nbsp;wyniki badań, jeśli je masz: RTG, rezonans, wypis ze szpitala.</p>
+  </div>
+  <div class="mt-12 grid lg:grid-cols-12 gap-5">
+    <ol class="lg:col-span-7 space-y-4">
+      <li class="rounded-3xl bg-surface border border-line p-6 sm:p-7 flex gap-5">
+        <span class="font-display font-extrabold text-4xl text-teal/35 tabular-nums leading-none">1</span>
+        <div><h3 class="font-display font-bold text-xl">Wywiad i&nbsp;diagnostyka funkcjonalna</h3>
+          <p class="mt-2 text-muted">Rozmawiamy o&nbsp;tym, co boli, od kiedy i&nbsp;kiedy się nasila. Sprawdzam zakres ruchu, siłę i&nbsp;sposób poruszania się.</p></div>
+      </li>
+      <li class="rounded-3xl bg-surface border border-line p-6 sm:p-7 flex gap-5">
+        <span class="font-display font-extrabold text-4xl text-teal/35 tabular-nums leading-none">2</span>
+        <div><h3 class="font-display font-bold text-xl">Terapia na stole</h3>
+          <p class="mt-2 text-muted">Pracuję z&nbsp;miejscem, które jest przyczyną problemu. Mówię, co robię i&nbsp;dlaczego, a&nbsp;tempo dopasowuję do Ciebie.</p></div>
+      </li>
+      <li class="rounded-3xl bg-surface border border-line p-6 sm:p-7 flex gap-5">
+        <span class="font-display font-extrabold text-4xl text-teal/35 tabular-nums leading-none">3</span>
+        <div><h3 class="font-display font-bold text-xl">Ćwiczenia do domu</h3>
+          <p class="mt-2 text-muted">Dostajesz 2–3 proste ćwiczenia, które zajmują kilka minut dziennie. Od nich w&nbsp;dużej mierze zależy efekt.</p></div>
+      </li>
+    </ol>
+    <div class="lg:col-span-5 rounded-3xl overflow-hidden border border-line min-h-[18rem]">
+      <img src="img/cwiczenia.webp" alt="Fizjoterapeutka pokazuje ćwiczenie z taśmą oporową" class="w-full h-full object-cover" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- OPINIE -->
+<section class="bg-teal text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <p class="text-xs uppercase tracking-[0.25em] text-white/75 font-bold">Opinie pacjentów</p>
+        <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Co mówią pacjenci</h2>
+      </div>
+      <p class="flex items-baseline gap-3"><span class="font-display font-extrabold text-5xl tabular-nums">4,9</span>
+        <span class="text-sand text-lg tracking-widest" aria-label="Ocena 4,9 na 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+        <span class="text-white/75">86 opinii</span></p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <figure class="rounded-3xl bg-white/10 border border-white/15 p-7">
+        <p class="text-sand tracking-widest text-sm" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        <blockquote class="mt-4 text-white/90">„Po skręceniu kostki na zejściu ze Śnieżki myślałam, że sezon mam z&nbsp;głowy. Po pięciu wizytach wróciłam do biegania, a&nbsp;ćwiczenia robię do dziś.”</blockquote>
+        <figcaption class="mt-5 font-semibold">Agnieszka W.</figcaption>
+      </figure>
+      <figure class="rounded-3xl bg-white/10 border border-white/15 p-7">
+        <p class="text-sand tracking-widest text-sm" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        <blockquote class="mt-4 text-white/90">„Konkretnie i&nbsp;bez lania wody. Pani Marta wytłumaczyła mi, skąd się bierze ból pleców, i&nbsp;pierwszy raz od dawna śpię całą noc.”</blockquote>
+        <figcaption class="mt-5 font-semibold">Tomasz K.</figcaption>
+      </figure>
+      <figure class="rounded-3xl bg-white/10 border border-white/15 p-7">
+        <p class="text-sand tracking-widest text-sm" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        <blockquote class="mt-4 text-white/90">„Rehabilitacja po rekonstrukcji więzadła. Każdy etap był zaplanowany, wiedziałam, co i&nbsp;po co robimy. Polecam z&nbsp;całego serca.”</blockquote>
+        <figcaption class="mt-5 font-semibold">Ewa M.</figcaption>
+      </figure>
+      <figure class="rounded-3xl bg-white/10 border border-white/15 p-7">
+        <p class="text-sand tracking-widest text-sm" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        <blockquote class="mt-4 text-white/90">„Pracuję przy komputerze i&nbsp;kark bolał mnie codziennie. Trzy wizyty i&nbsp;kilka ćwiczeń zrobiły więcej niż rok tabletek.”</blockquote>
+        <figcaption class="mt-5 font-semibold">Paweł R.</figcaption>
+      </figure>
+      <figure class="rounded-3xl bg-white/10 border border-white/15 p-7 md:col-span-2 lg:col-span-2">
+        <p class="text-sand tracking-widest text-sm" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+        <blockquote class="mt-4 text-white/90 text-lg">„Spokojna atmosfera, punktualnie i&nbsp;z&nbsp;pełnym skupieniem na pacjencie. Trafiłam tu z&nbsp;bólem biodra po ciąży i&nbsp;dopiero tutaj ktoś dokładnie sprawdził, skąd on się bierze.”</blockquote>
+        <figcaption class="mt-5 font-semibold">Joanna S.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-12">
+  <div>
+    <p class="text-xs uppercase tracking-[0.25em] text-teal font-bold">Kontakt i&nbsp;dojazd</p>
+    <h2 class="mt-3 font-display font-extrabold text-4xl md:text-5xl leading-tight tracking-tight">Umów pierwszą wizytę</h2>
+    <p class="mt-5 text-lg text-muted">Najszybciej telefonicznie. Jeśli nie odbieram, jestem z&nbsp;pacjentem. Oddzwonię po wizycie.</p>
+    <ul class="mt-10 space-y-6">
+      <li class="flex gap-4 items-start">
+        <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center shrink-0"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+        <span><span class="block text-xs uppercase tracking-wider text-muted">Telefon</span>
+          <a href="tel:+48750000001" class="block font-display text-2xl font-bold tabular-nums whitespace-nowrap hover:text-teal">75 000 00 01</a></span>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+        <span><span class="block text-xs uppercase tracking-wider text-muted">Adres gabinetu</span>
+          <span class="block text-lg font-medium">ul. Lipowej Polany 7, 58-500 Jelenia Góra</span>
+          <span class="block text-[15px] text-muted">Parter, wejście bez schodów, parking przed budynkiem</span></span>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center shrink-0"><i class="fa-regular fa-clock" aria-hidden="true"></i></span>
+        <span><span class="block text-xs uppercase tracking-wider text-muted">Godziny przyjęć</span>
+          <span class="block text-lg font-medium">poniedziałek–piątek, <span class="whitespace-nowrap">8:00–19:00</span></span></span>
+      </li>
+      <li class="flex gap-4 items-start">
+        <span class="w-12 h-12 rounded-2xl bg-tealsoft text-teal flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+        <span class="min-w-0"><span class="block text-xs uppercase tracking-wider text-muted">E-mail</span>
+          <span class="block text-[15px] sm:text-lg font-medium [overflow-wrap:anywhere]">kontakt@martahalicka.example</span></span>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div class="rounded-3xl p-2 bg-surface border border-line shadow-xl shadow-ink/5">
+      <div class="rounded-2xl overflow-hidden">
+        <iframe title="Mapa okolicy: centrum Jeleniej Góry" loading="lazy"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=15.715%2C50.894%2C15.755%2C50.911&amp;layer=mapnik"
+                class="w-full h-80 md:h-[27rem] block" style="filter:grayscale(.3)"></iframe>
+      </div>
+    </div>
+    <p class="mt-3 text-sm text-muted"><i class="fa-solid fa-circle-info mr-1.5" aria-hidden="true"></i>Strona przykładowa: mapa pokazuje ogólnie centrum Jeleniej Góry. W&nbsp;prawdziwej wersji z&nbsp;dokładnym punktem i&nbsp;przyciskiem „Wyznacz trasę”.</p>
+    <div class="mt-6 rounded-3xl overflow-hidden border border-line aspect-[16/9]">
+      <img src="img/gabinet.webp" alt="Gabinet fizjoterapii z leżanką do terapii" class="w-full h-full object-cover" loading="lazy">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-line bg-surface py-10 px-4 text-center text-sm text-muted">
+  <p class="font-display font-bold text-lg text-ink">Fizjoterapia Marta Halicka</p>
+  <p class="mt-1">ul. Lipowej Polany 7, 58-500 Jelenia Góra · <a href="tel:+48750000001" class="whitespace-nowrap hover:text-teal">75 000 00 01</a></p>
+  <p class="mt-3 text-xs opacity-70">© 2026 · Strona przykładowa, wszystkie dane są fikcyjne</p>
+</footer>
+
+<!-- PRZYCISK „ZADZWOŃ” NA TELEFONIE -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-bg/90 backdrop-blur-xl border-t border-line">
+  <a href="tel:+48750000001" class="flex items-center justify-center gap-3 w-full rounded-2xl bg-teal text-white font-semibold text-lg py-4 shadow-lg shadow-teal/30 active:scale-[0.98] transition whitespace-nowrap">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i>Zadzwoń: 75 000 00 01
+  </a>
+</div>
+<div class="md:hidden h-24" aria-hidden="true"></div>
+
+<!-- OKNO: CO ZAWIERA PAKIET -->
+<div id="modal-pakiet" class="modal fixed inset-0 z-[60] flex items-end sm:items-center justify-center p-0 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-pakiet-tytul" hidden>
+  <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" data-modal-close></div>
+  <div class="relative w-full sm:max-w-lg max-h-[90vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl bg-surface shadow-2xl p-6 sm:p-8">
+    <button type="button" data-modal-close class="absolute top-4 right-4 w-10 h-10 rounded-full hover:bg-bg text-muted" aria-label="Zamknij"><i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i></button>
+    <p class="text-xs uppercase tracking-[0.2em] text-teal font-bold">Strona przykładowa</p>
+    <h2 id="modal-pakiet-tytul" class="mt-2 font-display font-extrabold text-3xl">Pakiet Wizytówka</h2>
+    <p class="mt-2 text-muted">Dla jednoosobowego gabinetu, specjalisty albo rzemieślnika, który chce, żeby klient znalazł go w&nbsp;internecie i&nbsp;od razu zadzwonił.</p>
+    <ul class="mt-6 space-y-3 text-[16px]">
+      <li class="flex gap-3"><i class="fa-solid fa-check text-teal mt-1.5" aria-hidden="true"></i><span>Jedna przewijana strona zaprojektowana dla Pana/Pani firmy, a&nbsp;nie z&nbsp;gotowego szablonu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-teal mt-1.5" aria-hidden="true"></i><span>Wersja na telefon: numer jednym kliknięciem i&nbsp;stały przycisk „Zadzwoń”</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-teal mt-1.5" aria-hidden="true"></i><span>O&nbsp;mnie, zakres usług, cennik, pierwsza wizyta, opinie i&nbsp;mapa dojazdu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-teal mt-1.5" aria-hidden="true"></i><span>Teksty przygotowane na podstawie krótkiej rozmowy, bez pisania czegokolwiek samemu</span></li>
+      <li class="flex gap-3"><i class="fa-solid fa-check text-teal mt-1.5" aria-hidden="true"></i><span>Hosting, bezpieczne połączenie (kłódka) i&nbsp;drobne zmiany treści po mojej stronie</span></li>
+    </ul>
+    <div class="mt-7 rounded-2xl bg-tealsoft p-5">
+      <p class="font-display font-extrabold text-2xl">1 490 zł <span class="text-base font-semibold text-muted">jednorazowo</span></p>
+      <p class="text-[15px] text-ink/80">strona i&nbsp;rok utrzymania</p>
+      <p class="mt-3 font-display font-extrabold text-2xl">albo 129 zł <span class="text-base font-semibold text-muted">miesięcznie</span></p>
+      <p class="text-[15px] text-ink/80">abonament bez opłaty na start</p>
+    </div>
+    <p class="mt-5 text-sm text-muted">Wszystkie dane na tej stronie (osoba, adres, telefon, opinie) są wymyślone i&nbsp;służą tylko do pokazania, jak może wyglądać Pana/Pani strona.</p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var lastFocus = null;
+    function open(id) {
+      var m = document.getElementById(id);
+      if (!m) return;
+      lastFocus = document.activeElement;
+      m.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+      var btn = m.querySelector("[data-modal-close].absolute.top-4") || m.querySelector("button");
+      if (btn) btn.focus();
+    }
+    function close(m) {
+      m.hidden = true;
+      document.documentElement.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    }
+    document.querySelectorAll("[data-modal-open]").forEach(function (b) {
+      b.addEventListener("click", function () { open(b.getAttribute("data-modal-open")); });
+    });
+    document.querySelectorAll(".modal").forEach(function (m) {
+      m.querySelectorAll("[data-modal-close]").forEach(function (c) { c.addEventListener("click", function () { close(m); }); });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      document.querySelectorAll(".modal:not([hidden])").forEach(close);
+    });
+  })();
+</script>
+</body>
+</html>
