@@ -4,7 +4,7 @@
    Działa zwykły link do arkusza udostępnionego „każdy, kto ma link” (zmiana ceny widoczna od razu)
    albo link „Opublikuj w internecie → CSV” (Google odświeża go z kilkuminutowym opóźnieniem).
    Pusty link, brak internetu albo błąd arkusza: strona pokazuje menu zapisane w stronie, bez komunikatu o błędzie. */
-const SHEET_CSV_URL = "";
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/11dSN2hShXu4EiKh_27pQEfC44uiATsikbftdMwH4v08/edit?gid=490587101#gid=490587101";
 
 (function () {
   "use strict";
